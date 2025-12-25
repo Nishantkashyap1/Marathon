@@ -1,5 +1,0 @@
-destid
-idlist
-mmsg
-varchar
-mdis

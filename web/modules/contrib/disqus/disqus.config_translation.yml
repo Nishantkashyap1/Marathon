@@ -1,5 +1,0 @@
-disqus.settings:
-  title: 'Disqus'
-  base_route_name: disqus.settings
-  names:
-    - disqus.settings
