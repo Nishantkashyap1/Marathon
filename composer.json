@@ -69,6 +69,16 @@
         },
         "sort-packages": true
     },
+    "scripts": {
+        "post-install-cmd": [
+            "chmod +x scripts/post-merge.sh",
+            "ln -sf ../../scripts/post-merge.sh .git/hooks/post-merge"
+        ],
+        "post-update-cmd": [
+            "chmod +x scripts/post-merge.sh",
+            "ln -sf ../../scripts/post-merge.sh .git/hooks/post-merge"
+        ]
+    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
@@ -125,5 +135,8 @@
                 "      composer remove drupal/core-project-message"
             ]
         }
+    },
+    "require-dev": {
+        "brainmaestro/composer-git-hooks": "^3.0"
     }
 }
