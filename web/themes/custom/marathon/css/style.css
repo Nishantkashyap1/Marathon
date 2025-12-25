@@ -640,7 +640,7 @@ background: linear-gradient(
     font-size: 16px;
     line-height: 1em;
     color: #fff;
-    color: #fffff;
+    font-weight: bold;
 }
 
 /* Date Styling */
