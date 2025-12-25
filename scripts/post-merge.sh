@@ -13,3 +13,15 @@ ddev drush cr
 echo "----------------------------------------------------"
 echo "✅ DDEV is now synced with the latest code."
 echo "----------------------------------------------------"
+
+
+# Check if the database is missing after the pull
+if ! ddev drush status --format=json 2>/dev/null | grep -q '"db-status": "Connected"'; then
+    echo ""
+    echo "----------------------------------------------------"
+    echo "🚨 NEW SITE DETECTED (No Database Found) 🚨"
+    echo "To fully set up your local environment, please run:"
+    echo "👉 sh scripts/setup.sh"
+    echo "----------------------------------------------------"
+    echo ""
+fi
