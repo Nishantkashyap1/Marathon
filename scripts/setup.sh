@@ -23,11 +23,10 @@ ddev start
 echo "📥 Installing Composer dependencies..."
 ddev composer install
 
-# 4. Connect Git Hooks (The DevOps Magic)
+# 4. Connect Git Hooks
 echo "🔗 Connecting Git Automation Hooks..."
 if [ -d ".git" ]; then
     chmod +x scripts/*.sh
-    # Link the post-merge hook so updates are automatic later
     ln -sf ../../scripts/post-merge.sh .git/hooks/post-merge
     echo "   ✅ Hooks linked successfully."
 else
@@ -35,7 +34,6 @@ else
 fi
 
 # 5. Database Import
-# We check for both 'db.sql.gz' or 'data.sql.gz' to be safe
 DB_FILE=""
 if [ -f "db.sql.gz" ]; then DB_FILE="db.sql.gz"; 
 elif [ -f "data.sql.gz" ]; then DB_FILE="data.sql.gz"; fi
@@ -44,12 +42,20 @@ if [ -n "$DB_FILE" ]; then
     echo "📥 Importing database from $DB_FILE..."
     ddev import-db --file="$DB_FILE"
 else
-    echo "⚠️  No database dump found (db.sql.gz). Skipping import."
+    echo "⚠️  No database dump found. Skipping import."
 fi
 
-# 6. Final Drupal Sync
-echo "⚙️  Running Drupal updates and cache clear..."
+# 6. Final Drupal Sync (The "DevOps Trifecta")
+echo "⚙️  Syncing Drupal (Updates -> Config -> Cache)..."
+
+# Step A: Run database updates (schema changes)
 ddev drush updb -y
+
+# Step B: Import Configuration (Apply YAML files to DB)
+echo "📥 Importing configuration (drush cim)..."
+ddev drush cim -y
+
+# Step C: Rebuild Cache
 ddev drush cr
 
 echo "----------------------------------------------------"
