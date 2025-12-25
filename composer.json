@@ -69,16 +69,6 @@
         },
         "sort-packages": true
     },
-    "scripts": {
-        "post-install-cmd": [
-            "chmod +x scripts/post-merge.sh",
-            "ln -sf ../../scripts/post-merge.sh .git/hooks/post-merge || true"
-        ],
-        "post-update-cmd": [
-            "chmod +x scripts/post-merge.sh",
-            "ln -sf ../../scripts/post-merge.sh .git/hooks/post-merge || true"
-        ]
-    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
