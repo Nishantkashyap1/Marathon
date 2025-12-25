@@ -1,0 +1,30 @@
+uuid: 7614839b-8c2c-4681-8b63-37dac76d4411
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_review_category
+    - node.type.review
+    - taxonomy.vocabulary.review_category
+id: node.review.field_review_category
+field_name: field_review_category
+entity_type: node
+bundle: review
+label: Kategori
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      review_category: review_category
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

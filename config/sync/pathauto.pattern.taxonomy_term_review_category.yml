@@ -1,0 +1,21 @@
+uuid: 99eb3613-f354-44dc-bfde-7a6b85293f31
+langcode: sv
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_review_category
+label: 'Taxonomy term - Recensionskategori'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'utrustning/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      review_category: review_category
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,31 @@
+uuid: e485526a-2601-44b3-a920-b1b3646d9585
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.text
+    - field.field.content_section.text.field_content_section_body
+    - field.field.content_section.text.field_editorial
+  module:
+    - text
+id: content_section.text.default
+targetEntityType: content_section
+bundle: text
+mode: default
+content:
+  field_content_section_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_editorial:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

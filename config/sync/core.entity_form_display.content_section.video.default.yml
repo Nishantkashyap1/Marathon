@@ -1,0 +1,33 @@
+uuid: a72d1f51-9bca-488b-a25d-552cae14bbb3
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.video
+    - field.field.content_section.video.field_content_section_ref_video
+    - field.field.content_section.video.field_title
+id: content_section.video.default
+targetEntityType: content_section
+bundle: video
+mode: default
+content:
+  field_content_section_ref_video:
+    type: entity_reference_autocomplete_tags
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true

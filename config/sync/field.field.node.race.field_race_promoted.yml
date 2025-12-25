@@ -1,0 +1,23 @@
+uuid: 244dbaef-0936-4d16-a4fd-da32a4dde875
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_race_promoted
+    - node.type.race
+id: node.race.field_race_promoted
+field_name: field_race_promoted
+entity_type: node
+bundle: race
+label: 'Sponsrat lopp'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

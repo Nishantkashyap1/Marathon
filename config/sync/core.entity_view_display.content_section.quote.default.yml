@@ -1,0 +1,30 @@
+uuid: 75a3f68f-5594-4ccf-a26e-7fb68795799b
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.quote
+    - field.field.content_section.quote.field_content_section_author
+    - field.field.content_section.quote.field_content_section_quote
+id: content_section.quote.default
+targetEntityType: content_section
+bundle: quote
+mode: default
+content:
+  field_content_section_author:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content_section_quote:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

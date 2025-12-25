@@ -1,0 +1,26 @@
+uuid: b7a099a2-54e4-4311-8818-4a1283a4dfca
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.inline_entity_form_preview
+    - eck.eck_type.content_section.video
+    - field.field.content_section.video.field_content_section_ref_video
+    - field.field.content_section.video.field_title
+id: content_section.video.inline_entity_form_preview
+targetEntityType: content_section
+bundle: video
+mode: inline_entity_form_preview
+content:
+  field_content_section_ref_video:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: inline_entity_form_preview
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_title: true
+  langcode: true

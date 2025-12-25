@@ -1,0 +1,11 @@
+uuid: 5a58c4db-56db-4934-9227-2771da474efd
+langcode: sv
+status: true
+dependencies:
+  module:
+    - user
+id: user.presentation
+label: presentation
+description: ''
+targetEntityType: user
+cache: true

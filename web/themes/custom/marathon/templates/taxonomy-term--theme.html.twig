@@ -1,0 +1,42 @@
+{# ------------------------------------------------------------------
+  Build a safe term id and URL
+------------------------------------------------------------------ #}
+{% set term_id = '' %}
+{% if term is defined %}
+  {% if term.id is defined and term.id.value is defined and term.id.value|trim != '' %}
+    {% set term_id = term.id.value|trim %}
+  {% elseif term.id is defined and term.id is not iterable and term.id|trim != '' %}
+    {% set term_id = term.id|trim %}
+  {% endif %}
+{% endif %}
+
+{% if term_id != '' %}
+  {% set url = path('entity.taxonomy_term.canonical', {'taxonomy_term': term_id}) %}
+{% else %}
+  {% set url = '#' %}
+{% endif %}
+
+<div class="tema-card">
+
+  {# FULL CARD CLICKABLE LINK #}
+  <a href="{{ url }}"
+     class="tema-card-link"
+     aria-label="{{ term.name.value }}"></a>
+
+  <div class="tema-image">
+    {{ content.field_image }}
+
+    <div class="tema-node-count">
+      {{ term_node_count(term.id) }} artiklar
+    </div>
+  </div>
+
+  <div class="tema-content">
+    <h3 class="tema-title">{{ term.name.value }}</h3>
+
+    <div class="tema-description">
+      {{ content.description }}
+    </div>
+  </div>
+
+</div>

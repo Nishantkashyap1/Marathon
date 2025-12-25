@@ -1,0 +1,9 @@
+uuid: c436316f-1049-4932-b8a3-99979d829982
+langcode: sv
+status: true
+dependencies: {  }
+name: Distrikt
+vid: district
+description: null
+weight: 0
+new_revision: false

@@ -1,0 +1,9 @@
+uuid: c47f3856-e17d-4b46-b12a-3778386aca2a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.promotion
+name: Puff
+type: promotion
+description: Puff

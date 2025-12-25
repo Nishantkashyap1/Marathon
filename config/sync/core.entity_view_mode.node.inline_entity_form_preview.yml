@@ -1,0 +1,11 @@
+uuid: 335d6aa3-6667-4dd6-9bfc-f437d2360add
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node.inline_entity_form_preview
+label: inline_entity_form_preview
+description: ''
+targetEntityType: node
+cache: true

@@ -1,0 +1,9 @@
+uuid: a2fd2153-4f85-4200-b3f5-0db00485fcbe
+langcode: sv
+status: true
+dependencies: {  }
+name: Målgrupp
+vid: target_group
+description: null
+weight: 0
+new_revision: false

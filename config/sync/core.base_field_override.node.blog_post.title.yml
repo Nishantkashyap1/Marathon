@@ -1,0 +1,18 @@
+uuid: d256a722-cfd5-4513-a9aa-74f21e50910e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.blog_post
+id: node.blog_post.title
+field_name: title
+entity_type: node
+bundle: blog_post
+label: Titel
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

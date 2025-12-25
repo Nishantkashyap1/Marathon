@@ -1,0 +1,30 @@
+uuid: bc825cb3-948e-4227-9d54-4a73abdf3195
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.video
+    - field.storage.content_section.field_content_section_ref_video
+    - node.type.video
+id: content_section.video.field_content_section_ref_video
+field_name: field_content_section_ref_video
+entity_type: content_section
+bundle: video
+label: Video
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

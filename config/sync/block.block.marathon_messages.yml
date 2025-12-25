@@ -1,0 +1,22 @@
+uuid: d12067d8-45a7-4925-b16d-ae6c34a2a12b
+langcode: sv
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - marathon
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: marathon_messages
+theme: marathon
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

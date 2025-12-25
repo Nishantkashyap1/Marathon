@@ -1,0 +1,19 @@
+uuid: 4719c201-98d5-42c6-8cee-48089b46dfe2
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_heading
+    - node.type.review
+id: node.review.field_sub_heading
+field_name: field_sub_heading
+entity_type: node
+bundle: review
+label: 'Sub heading'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

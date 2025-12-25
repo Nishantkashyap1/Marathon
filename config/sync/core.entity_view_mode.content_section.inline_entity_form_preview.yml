@@ -1,0 +1,11 @@
+uuid: 005c9fe0-9f9a-4e0e-becd-810207dc4c10
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.inline_entity_form_preview
+label: inline_entity_form_preview
+description: ''
+targetEntityType: content_section
+cache: true

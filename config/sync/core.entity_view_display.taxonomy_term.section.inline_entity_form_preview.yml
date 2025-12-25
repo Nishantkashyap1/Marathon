@@ -1,0 +1,32 @@
+uuid: a2d05a34-63c7-48cd-b833-a6c633415a7d
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.inline_entity_form_preview
+    - field.field.taxonomy_term.section.field_promotions
+    - taxonomy.vocabulary.section
+  module:
+    - text
+id: taxonomy_term.section.inline_entity_form_preview
+targetEntityType: taxonomy_term
+bundle: section
+mode: inline_entity_form_preview
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_promotions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 72945d54-c2fc-4437-b4b1-2bcf7e80dad6
+langcode: sv
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_blog_category
+label: 'Taxonomy term - Bloggkategori'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'bloggar/[term:term_owner_name]/[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      blog_category: blog_category
+selection_logic: and
+weight: 0
+relationships: {  }

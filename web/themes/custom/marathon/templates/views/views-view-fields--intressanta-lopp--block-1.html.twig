@@ -1,0 +1,22 @@
+{#
+  Views row template: Intressanta lopp
+#}
+<a href="{{ fields.field_interesting_race_link.content|striptags|trim }}"
+   class="interesting-race">
+
+  <div class="interesting-race__bg">
+    {{ fields.field_interesting_race_bg.content }}
+  </div>
+
+  <div class="interesting-race__overlay">
+    <h3 class="interesting-race__title">
+      {{ fields.title.content }}
+    </h3>
+
+    <div class="interesting-race__date">
+      {{ fields.field_interesting_race_date.content }}
+    </div>
+  </div>
+
+</a>
+

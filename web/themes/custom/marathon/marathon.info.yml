@@ -1,0 +1,19 @@
+name: Marathon
+type: theme
+description: 'Marathon is a custom subtheme based on the powerful Bootstrap framework.'
+core_version_requirement: ^10.3 || ^11
+base theme: bootstrap5
+
+libraries:
+  - marathon/global-styling
+
+regions:
+  navigation: 'Main Navigation'
+  header_right: 'Header Right'
+  hero_left: 'Hero Left'
+  hero_right: 'Hero Right'
+  content: 'Main Content'
+  sidebar_first: 'Sidebar First'
+  sidebar_second: 'Sidebar Second'
+  footer_bottom: 'Footer'
+  social_media: 'Social Media Links'

@@ -1,0 +1,15 @@
+uuid: e078e489-6ca0-4165-917a-43db2bdad7b9
+langcode: en
+status: true
+dependencies: {  }
+name: right_with_small_image_400_186
+label: 'Right With Small Image(400*186)'
+effects:
+  dfd48b99-05f2-4760-b7a4-f277cf88a323:
+    uuid: dfd48b99-05f2-4760-b7a4-f277cf88a323
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 185
+      anchor: center-center

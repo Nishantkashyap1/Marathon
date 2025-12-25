@@ -1,0 +1,18 @@
+uuid: 96471120-6e12-446b-a7ea-46fecd4b1892
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.small_teaser
+    - eck.eck_type.content_section.video
+    - field.field.content_section.video.field_content_section_ref_video
+    - field.field.content_section.video.field_title
+id: content_section.video.small_teaser
+targetEntityType: content_section
+bundle: video
+mode: small_teaser
+content: {  }
+hidden:
+  field_content_section_ref_video: true
+  field_title: true
+  langcode: true

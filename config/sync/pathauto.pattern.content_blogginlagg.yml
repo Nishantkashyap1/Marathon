@@ -1,0 +1,22 @@
+uuid: 3a75bbcc-1695-434d-b39a-a81c1972a8fc
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: content_blogginlagg
+label: 'Content - Blogginlägg'
+type: 'canonical_entities:node'
+pattern: 'bloggar/[node:author:name]/[node:title]'
+selection_criteria:
+  66e1c241-378d-483b-b5db-bfd2437112c1:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 66e1c241-378d-483b-b5db-bfd2437112c1
+    context_mapping:
+      node: node
+    bundles:
+      blog_post: blog_post
+selection_logic: and
+weight: -5
+relationships: {  }

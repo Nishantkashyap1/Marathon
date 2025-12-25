@@ -1,0 +1,19 @@
+uuid: f6204f12-3d65-4ce0-ad5d-1b3e4e1c9a1c
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.promotion.promotion
+    - field.storage.promotion.field_promotion_body
+id: promotion.promotion.field_promotion_body
+field_name: field_promotion_body
+entity_type: promotion
+bundle: promotion
+label: Brödtext
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

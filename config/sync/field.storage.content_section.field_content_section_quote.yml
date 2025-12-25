@@ -1,0 +1,19 @@
+uuid: 434f6455-aed1-48f0-af51-6ed6015e9184
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.field_content_section_quote
+field_name: field_content_section_quote
+entity_type: content_section
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

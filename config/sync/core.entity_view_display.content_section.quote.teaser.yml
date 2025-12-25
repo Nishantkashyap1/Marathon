@@ -1,0 +1,18 @@
+uuid: 57781137-0943-45b6-8755-894b2a71b578
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.teaser
+    - eck.eck_type.content_section.quote
+    - field.field.content_section.quote.field_content_section_author
+    - field.field.content_section.quote.field_content_section_quote
+id: content_section.quote.teaser
+targetEntityType: content_section
+bundle: quote
+mode: teaser
+content: {  }
+hidden:
+  field_content_section_author: true
+  field_content_section_quote: true
+  langcode: true

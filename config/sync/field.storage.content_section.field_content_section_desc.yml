@@ -1,0 +1,19 @@
+uuid: 7a6f7e2d-9157-4fe9-91fb-7f41ec79f16b
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.field_content_section_desc
+field_name: field_content_section_desc
+entity_type: content_section
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

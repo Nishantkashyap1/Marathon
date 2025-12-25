@@ -1,0 +1,17 @@
+_core:
+  default_config_hash: jsI4IUcY8hRC7XUrdR6S8I78eMdvxtULZholaWf27Uo
+absolute: false
+file_field_images_enabled: false
+widgets:
+  file:
+    - file_generic
+  image:
+    - image_image
+css_classes:
+  file: {  }
+  image: {  }
+file_extensions:
+  audio:
+    - mp3
+  video:
+    - mp4

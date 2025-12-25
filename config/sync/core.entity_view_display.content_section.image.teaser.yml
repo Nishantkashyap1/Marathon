@@ -1,0 +1,33 @@
+uuid: b9ad61e4-1a66-48ec-8c04-5c1870196460
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.teaser
+    - eck.eck_type.content_section.image
+    - field.field.content_section.image.field_content_section_byline
+    - field.field.content_section.image.field_content_section_desc
+    - field.field.content_section.image.field_content_section_image
+    - image.style.left_with_big_image_860_375
+  module:
+    - image
+id: content_section.image.teaser
+targetEntityType: content_section
+bundle: image
+mode: teaser
+content:
+  field_content_section_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: left_with_big_image_860_375
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_content_section_byline: true
+  field_content_section_desc: true
+  langcode: true

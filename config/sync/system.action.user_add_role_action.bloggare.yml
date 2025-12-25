@@ -1,0 +1,14 @@
+uuid: 07074e0f-a0fc-4dee-bfc3-088934acf18b
+langcode: sv
+status: true
+dependencies:
+  config:
+    - user.role.bloggare
+  module:
+    - user
+id: user_add_role_action.bloggare
+label: 'Add the Bloggare role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: bloggare

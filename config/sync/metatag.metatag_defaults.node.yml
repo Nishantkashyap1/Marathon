@@ -1,0 +1,12 @@
+uuid: 3afa8380-cbee-4235-be7a-b9891f7b2247
+langcode: sv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rpwvgyEURXLz_JjgMCrkS1rUv-0k3L79BpO-ReN7fDI
+id: node
+label: Innehåll
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:summary]'
+  canonical_url: '[node:url]'

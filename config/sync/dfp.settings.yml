@@ -1,0 +1,13 @@
+_core:
+  default_config_hash: 0BRysPEF3L3BoYGP4WUvuMcoYWo49YP66MVQlPzOls0
+network_id: ''
+adunit_pattern: ''
+click_url: ''
+async_rendering: true
+disable_init_load: false
+single_request: true
+default_slug: ''
+collapse_empty_divs: 1
+hide_slug: true
+targeting: {  }
+adtest_adunit_pattern: ''

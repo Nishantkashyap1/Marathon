@@ -1,0 +1,38 @@
+uuid: 02118cb8-ff0c-40de-b05b-0c05e7f0ffda
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_theme_image
+    - taxonomy.vocabulary.theme
+  module:
+    - image
+id: taxonomy_term.theme.field_theme_image
+field_name: field_theme_image
+entity_type: taxonomy_term
+bundle: theme
+label: 'Tema bild'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

@@ -1,0 +1,11 @@
+uuid: 1278db8a-6367-4e4a-ac31-3a43e5764610
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node.small_teaser
+label: small_teaser
+description: ''
+targetEntityType: node
+cache: true

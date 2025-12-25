@@ -1,0 +1,18 @@
+uuid: 1de4229b-2245-48c0-956f-612ab1b5aca4
+langcode: sv
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: iframe
+type: iframe
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

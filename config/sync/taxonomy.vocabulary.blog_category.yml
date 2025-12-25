@@ -1,0 +1,9 @@
+uuid: 3255547b-e506-4164-9f78-0c3c77e62ac3
+langcode: sv
+status: true
+dependencies: {  }
+name: Bloggkategori
+vid: blog_category
+description: null
+weight: -8
+new_revision: false

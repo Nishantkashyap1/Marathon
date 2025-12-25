@@ -1,0 +1,25 @@
+uuid: 22ec13ec-1913-490d-b4a9-a580ced5baf5
+langcode: sv
+status: false
+dependencies:
+  config:
+    - system.menu.menu-footer-menu
+  module:
+    - system
+  theme:
+    - marathon
+id: marathon_footermenu
+theme: marathon
+region: sidebar_first
+weight: -6
+provider: null
+plugin: 'system_menu_block:menu-footer-menu'
+settings:
+  id: 'system_menu_block:menu-footer-menu'
+  label: 'Footer menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

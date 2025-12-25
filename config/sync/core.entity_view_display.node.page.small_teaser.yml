@@ -1,0 +1,25 @@
+uuid: a070516a-59d8-4bf7-9ff4-d983c078cf7d
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_page_body
+    - node.type.page
+  module:
+    - user
+id: node.page.small_teaser
+targetEntityType: node
+bundle: page
+mode: small_teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  body: true
+  field_page_body: true
+  langcode: true

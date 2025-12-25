@@ -1,0 +1,22 @@
+uuid: 438da199-4337-4b4b-8ffe-f3b7a4b7cb9d
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_race_type_color
+    - taxonomy.vocabulary.race_type
+  module:
+    - color_field
+id: taxonomy_term.race_type.field_race_type_color
+field_name: field_race_type_color
+entity_type: taxonomy_term
+bundle: race_type
+label: 'Färg för lopptyp'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

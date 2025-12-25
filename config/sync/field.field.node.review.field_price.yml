@@ -1,0 +1,23 @@
+uuid: 8beb015e-411b-465c-8d87-368434401a7d
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.review
+id: node.review.field_price
+field_name: field_price
+entity_type: node
+bundle: review
+label: Pris
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: kr
+field_type: integer

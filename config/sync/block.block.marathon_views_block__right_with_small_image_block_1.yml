@@ -1,0 +1,30 @@
+uuid: 99470c40-5aaa-4f4b-a322-3e938b9575cb
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.right_with_small_image
+  module:
+    - system
+    - views
+  theme:
+    - marathon
+id: marathon_views_block__right_with_small_image_block_1
+theme: marathon
+region: sidebar_first
+weight: -3
+provider: null
+plugin: 'views_block:right_with_small_image-block_1'
+settings:
+  id: 'views_block:right_with_small_image-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

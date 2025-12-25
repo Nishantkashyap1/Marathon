@@ -1,0 +1,18 @@
+uuid: acb20da5-371a-4549-af32-cb4004452971
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.race
+id: node.race.title
+field_name: title
+entity_type: node
+bundle: race
+label: 'Namn på lopp'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

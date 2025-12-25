@@ -1,0 +1,22 @@
+uuid: a467d045-fe81-4b03-8991-44530b3f81e7
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: content_artikel
+label: 'Content - Artikel'
+type: 'canonical_entities:node'
+pattern: 'nyheter/[node:title]'
+selection_criteria:
+  37c2d9e8-44fb-4ef7-a8fd-e1661c6659e0:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 37c2d9e8-44fb-4ef7-a8fd-e1661c6659e0
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }

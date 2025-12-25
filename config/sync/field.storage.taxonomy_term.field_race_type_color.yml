@@ -1,0 +1,20 @@
+uuid: 89f5c721-1af4-40b5-82b3-b72cc71cd6f3
+langcode: und
+status: true
+dependencies:
+  module:
+    - color_field
+    - taxonomy
+id: taxonomy_term.field_race_type_color
+field_name: field_race_type_color
+entity_type: taxonomy_term
+type: color_field_type
+settings:
+  format: '#HEXHEX'
+module: color_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

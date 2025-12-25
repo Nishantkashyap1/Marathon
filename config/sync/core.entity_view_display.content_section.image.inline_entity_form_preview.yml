@@ -1,0 +1,45 @@
+uuid: 7cf17867-198d-4f63-bd3a-ef58c5a8124e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.inline_entity_form_preview
+    - eck.eck_type.content_section.image
+    - field.field.content_section.image.field_content_section_byline
+    - field.field.content_section.image.field_content_section_desc
+    - field.field.content_section.image.field_content_section_image
+  module:
+    - image
+id: content_section.image.inline_entity_form_preview
+targetEntityType: content_section
+bundle: image
+mode: inline_entity_form_preview
+content:
+  field_content_section_byline:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_content_section_desc:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_content_section_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

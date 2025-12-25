@@ -1,0 +1,29 @@
+uuid: ae511268-fe1a-4133-9ddf-16a8a17b4972
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.node.iframe.body
+    - node.type.iframe
+  module:
+    - text
+    - user
+id: node.iframe.default
+targetEntityType: node
+bundle: iframe
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

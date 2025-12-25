@@ -1,0 +1,37 @@
+uuid: 700da552-c3e5-49ab-af26-f247e12b6da7
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.video
+    - field.storage.node.field_content_sections
+    - node.type.video
+id: node.video.field_content_sections
+field_name: field_content_sections
+entity_type: node
+bundle: video
+label: 'Content section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:content_section'
+  handler_settings:
+    target_bundles:
+      - article
+      - blog_post
+      - iframe
+      - interesting_race
+      - page
+      - race
+      - review
+      - video
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

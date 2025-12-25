@@ -1,0 +1,11 @@
+uuid: 1768edaf-205f-4457-ba7c-bfe677e5ec75
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: promotion.full
+label: Full
+description: ''
+targetEntityType: promotion
+cache: true

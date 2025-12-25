@@ -1,0 +1,125 @@
+{#
+/**
+ * @file
+ * Marathon Front Page Template.
+ *
+ * Available variables:
+ * - base_path, is_front, logged_in, is_admin
+ * - page.header, page.navigation, page.hero, page.featured, page.content, page.footer
+ */
+#}
+
+<!DOCTYPE html>
+<div class="SiteTemplate" bis_skin_checked="1">
+
+  {# <body class="{{ attributes.addClass(body_classes) }}"> #}
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="whole-header siteTemplate-header border-bottom">
+
+      <div class="SiteTemplate-inner main-header">
+        <div class="d-flex justify-content-between align-items-center">
+          <!-- Logo -->
+          <h1 class="logo">
+            <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="Logo-imagee"Marathon.se>
+            {# <a href="/" class="Logo-image" title="Gå till startsidan"></a> #}
+              <img src="{{ base_path }}{{ directory }}/logo.svg" alt="{{ site_name }}" class="logo-image" width="150" height="auto">
+            </a>
+          </h1>
+           <!-- Logo End -->
+           <!-- Menu Start -->
+           <div class="main-menu-area">{{ page.navigation }}</div>
+           <!-- Menu End -->
+
+          <div class="d-flex header-right-section">
+            <div class="header-right-icons d-flex">
+              <div class="header-right">
+                {{ page.header_right }}
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+<!-- MAIN CONTENT -->
+<main class="container-fluid">
+
+  {# HERO SECTION (unchanged) #}
+  {% if page.hero_left or page.hero_right %}
+    <section class="container-fluid hero-news-section">
+      <div class="row g-3">
+        <!-- LEFT BIG REGION -->
+        <div class="hero-left col-lg-8">
+          {{ page.hero_left }}
+        </div>
+
+        <!-- RIGHT SMALL REGION -->
+        <div class="col-lg-4 d-flex flex-column gap-3">
+          {{ page.hero_right }}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+
+  {# MAIN LAYOUT WITH SIDEBARS #}
+  <section class="container-fluid main-layout">
+    <div class="row">
+
+      {# SIDEBAR FIRST #}
+      {% if page.sidebar_first %}
+        <aside class="col-lg-3 sidebar sidebar-first">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+
+      {# MAIN CONTENT #}
+      <div class="
+        {% if page.sidebar_first and page.sidebar_second %}
+          col-lg-6
+        {% elseif page.sidebar_first or page.sidebar_second %}
+          col-lg-9
+        {% else %}
+          col-lg-12
+        {% endif %}
+        main-content">
+        {{ page.content }}
+      </div>
+
+      {# SIDEBAR SECOND #}
+      {% if page.sidebar_second %}
+        <aside class="col-lg-3 sidebar sidebar-second">
+          {{ page.sidebar_second }}
+        </aside>
+      {% endif %}
+
+    </div>
+  </section>
+
+</main>
+
+    <!-- FOOTER -->
+    <footer class="siteTemplate-footer">
+      <div class="SiteTemplate-inner container-fluid">
+        <!-- Footer Links & Info -->
+
+        <!-- Bottom Footer -->
+        <div class="small">
+        <!-- Logo -->
+          <h1 class="footer-logo">
+            <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="Logo-imagee"Marathon.se>
+              <img src="{{ base_path }}{{ directory }}/logo.svg" alt="{{ site_name }}" class="" width="150" height="auto">
+            </a>
+          </h1>
+           <!-- Logo End -->
+          {% if page.footer_bottom %}
+            {{ page.footer_bottom }}
+          {% else %}
+            <p>&copy; {{ now|date('Y') }} {{ site_name }}. All rights reserved.</p>
+          {% endif %}
+        </div>
+      </div>
+    </footer>
+
+  {# </body> #}
+</div>

@@ -1,0 +1,25 @@
+uuid: be36f2c9-1d70-4130-80b5-8615650a7f0f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.race_type.field_race_type_color
+    - taxonomy.vocabulary.race_type
+  module:
+    - text
+id: taxonomy_term.race_type.teaser
+targetEntityType: taxonomy_term
+bundle: race_type
+mode: teaser
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_race_type_color: true
+  langcode: true

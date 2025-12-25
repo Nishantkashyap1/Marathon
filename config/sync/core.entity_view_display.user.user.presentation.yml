@@ -1,0 +1,32 @@
+uuid: 31a34184-fd78-41ef-9221-ab21c2143c63
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.presentation
+    - field.field.user.user.field_user_blog_name
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_presentation
+    - field.field.user.user.field_user_presentation_image
+    - field.field.user.user.field_user_sponsors
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.presentation
+targetEntityType: user
+bundle: user
+mode: presentation
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_user_blog_name: true
+  field_user_image: true
+  field_user_presentation: true
+  field_user_presentation_image: true
+  field_user_sponsors: true
+  langcode: true
+  user_picture: true

@@ -1,0 +1,671 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ * style.css → Handles structure, layout, grid, and positioning.
+ */
+ /* General Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+ 
+  .logo {
+    margin: 0px 0px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 40px;
+  }
+  
+  .logo:before {
+    width: 187px;
+    background-color: #8cb0db;
+    left: -30px;
+  }
+
+.logo:after {
+    width: 170px;
+    background-color: #528ec8;
+    left: -20px;
+}
+
+.logo:after, 
+.logo:before {
+    -webkit-transform: skew(-25deg,0deg);
+    -ms-transform: skew(-25deg,0deg);
+    transform: skew(-25deg,0deg);
+    content: "";
+    display: block;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+}
+
+.logo-image {
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 140px;
+    height: 50px;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+
+.hero-news-section img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.hero-news-section .block {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-news-section{
+  margin-bottom: 15px;
+
+}
+
+
+
+/***************************************
+   Left Big HERO SECTION STYLES
+   *******************************
+/*************************/
+
+/* Make each views row a positioning context */
+.view-topshelf-promotions .views-row,
+.view-left-with-big-image .views-row {
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #fff;
+}
+
+.hero-left.col-lg-8,
+.hero-news-section .view-left-with-big-image{
+  width: 860px; 
+}
+
+.container-fluid{
+  --bs-gutter-x: 0px !important;
+  margin-top: 10px;
+}
+
+.hero-left.col-lg-4 .row > *{
+  width: 400px;
+}
+
+.view-topshelf-promotions img,
+.view-left-with-big-image img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.view-topshelf-promotions .Promo-info,
+.view-left-with-big-image .Promo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 32px 15px;
+  z-index: 2;
+  color: #fff;
+}
+
+.view-topshelf-promotions .Promo-info::before,
+.view-left-with-big-image .Promo-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.92) 40%,
+    rgba(0, 0, 0, 0.70) 65%,
+    rgba(0, 0, 0, 0.35) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: -1;
+}
+
+.view-topshelf-promotions .Promo-heading--main,
+.view-left-with-big-image .Promo-heading--main {
+    margin: 0 0 12px;
+    font-weight: 800;
+    line-height: 1.15;
+    font-size: 35px;
+}
+
+.view-topshelf-promotions .Promo-lead,
+.view-left-with-big-image .Promo-lead {
+  margin: 0;
+  max-width: 900px;
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: #f2f2f2;
+}
+
+.view-topshelf-promotions .Promo-heading--main a,
+.view-left-with-big-image .Promo-heading--main a {
+  color: #fff;
+}
+
+.view-topshelf-promotions .Promo-heading--main,
+.view-topshelf-promotions .Promo-lead,
+.view-left-with-big-image .Promo-heading--main,
+.view-left-with-big-image .Promo-lead {
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.95);
+}
+
+/***************************************
+   Right Small NEWS SECTION STYLES
+   *******************************
+/*************************/
+
+.view-topshelf-promotions-right .promo
+.view-right-with-small-image .promo {
+    position: relative;
+}
+
+.view-topshelf-promotions-right .views-row,
+.view-right-with-small-image .views-row {
+  position: relative;
+  overflow: hidden;
+}
+
+.iew-topshelf-promotions-right .views-row:first-child,
+.view-right-with-small-image .views-row:first-child {
+  border-bottom: 1px solid #fff;
+}
+
+.view-topshelf-promotions-right .promo img,
+.view-right-with-small-image img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+}
+
+.view-topshelf-promotions-right .promo-info,
+.view-right-with-small-image .promo-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
+  z-index: 2;
+  color: #fff;
+}
+
+.view-topshelf-promotions-right .promo-info::before,
+.view-right-with-small-image .promo-info::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.98) 0%,
+    rgba(0, 0, 0, 0.90) 45%,
+    rgba(0, 0, 0, 0.65) 70%,
+    rgba(0, 0, 0, 0.30) 85%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: -1;
+}
+
+.view-topshelf-promotions-right .promo-heading--main,
+.view-right-with-small-image .promo-heading--main {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.view-topshelf-promotions-right .promo-heading--main a,
+.view-right-with-small-image .promo-heading--main a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.view-topshelf-promotions-right .promo-heading--main,
+.view-topshelf-promotions-right .promo-heading--main a,
+.view-right-with-small-image .promo-heading--main,
+.view-right-with-small-image .promo-heading--main a {
+  text-shadow: 0 3px 14px rgba(0, 0, 0, 0.95);
+}
+
+/* ==========================================================================
+   Article Listing - Home Page
+   View: view-article-list-on-home-page
+   Description: Styles for article listing on the home page
+   ========================================================================== */
+.view-taxonomy-term .view-content,
+.view-nyheterna .view-content,
+.view-article-list-on-home-page .view-content,
+.view-article-list-on-home-page .view-content{
+    background: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+}
+.view-taxonomy-term .article-row,
+.view-nyheterna .article-row,
+.view-article-list-on-home-page .article-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.article-teaser p {
+    margin-bottom: 0px;
+}
+
+p.ArticleTeaser-info {
+    color: #999;
+    font-size: 12px;
+}
+
+h2.article-title.article-field-title {
+    margin: 0 0 0px;
+    color: #333;
+    font-weight: 700;
+}
+
+.article-teaser .field--name-field-lead {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.view-taxonomy-term .img-fluid,
+.view-nyheterna .img-fluid,
+.view-article-list-on-home-page .img-fluid {
+    width: 218px !important;
+    max-width: none !important;
+}
+
+.view-taxonomy-term .article-field-title .field--name-title,
+.view-nyheterna .article-field-title a,
+.view-article-list-on-home-page h3.article-title.article-field-title {
+    margin-bottom: 0px;
+    color: #333;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+ /* Article teaser hover → change title color */
+.ArticleTeaser:hover .article-title,
+.ArticleTeaser:hover .article-title a {
+  color: #e63946; 
+  text-decoration: none;
+}
+
+
+/* Change title color on article hover */
+.article-teaser:hover .article-title,
+.article-teaser:hover .article-title span {
+  color: #e25400; 
+}
+
+/* Force title color change when card (link) is hovered */
+a.interesting-race:hover .interesting-race__title,
+a.ArticleTeaser:hover .article-title {
+  color: #e63946 !important;
+}
+
+.article-title a,
+.article-title span,
+.article-title {
+  transition: color 0.3s ease;
+}
+
+
+
+.view-nyheterna .article-field-title,
+.view-article-list-on-home-page .article-date time {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 12px;
+}
+
+.view-taxonomy-term .article-lead .field--name-field-lead,
+.view-nyheterna .article-lead,
+.view-article-list-on-home-page .article-lead {
+    margin: 0;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.view-nyheterna .article-category,
+.view-nyheterna .article-date{
+  margin-bottom: 0px;
+}
+
+.view-nyheterna .node-id,
+.view-nyheterna .views-field-edit-node,
+.view-article-list-on-home-page .node-id,
+.view-article-list-on-home-page .views-field-edit-node{
+  display: none;
+}
+
+.view-nyheterna .ArticleTeaser,
+.view-nyheterna .ArticleTeaser a:hover,
+.view-nyheterna .ArticleTeaser a:focus,
+.view-article-list-on-home-page .ArticleTeaser,
+.view-article-list-on-home-page .ArticleTeaser:hover,
+.view-article-list-on-home-page .ArticleTeaser:focus {
+  text-decoration: none;
+}
+
+.view-nyheterna .ArticleTeaser h3 a,
+.view-nyheterna .ArticleTeaser p,
+.view-nyheterna .ArticleTeaser time,
+.view-article-list-on-home-page .ArticleTeaser h3,
+.view-article-list-on-home-page .ArticleTeaser p,
+.view-article-list-on-home-page .ArticleTeaser time {
+  text-decoration: none;
+}
+
+.pagination {
+    padding: 0px;
+}
+
+/* ========================================
+   End Article Listing - Home Page
+    ======================================== */
+
+/* .view-taxonomy-term, */
+.article-date.hidden {
+  display: none;
+}
+
+.article-row,
+.ArticleTeaser {
+  position: relative; /* Needed for stretched link positioning */
+}
+
+.article-link-overlay,
+.ArticleTeaser .stretched-link {
+  position: absolute;
+  inset: 0;        /* top:0; right:0; bottom:0; left:0 */
+  z-index: 1;      /* Below inner links */
+  font-size: 0px;  /* Hide any text */
+}
+
+.article-row a:not(.article-link-overlay),
+.ArticleTeaser a:not(.stretched-link) {
+  position: relative;
+  z-index: 2;     
+}
+
+/* ==========================================================================
+   End Article Listing - Home Page
+   ========================================================================== */
+
+/* ==========================================================================
+    Teman om Löpningen
+    ========================================================================== */
+
+.block-views-blockteman-om-lopningen-block-1 h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 10px;
+  padding-left: 16px;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #222;
+  position: relative;
+}
+
+/* Red vertical bar */
+.block-views-blockteman-om-lopningen-block-1 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background-color: #d71920;
+}
+
+/* Horizontal line */
+.block-views-blockteman-om-lopningen-block-1 h2::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: #dcdcdc;
+  margin-left: 16px;
+}
+
+
+body.lopningen .view-teman-om-lopningen {
+    height: 265px;
+}
+
+body.lopningen.view-teman-om-lopningen .row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+body.lopningen .tema-card {
+    position: relative;
+    flex-direction: column;
+    width: 98%;
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    height: 245px;
+}
+
+body.lopningen .tema-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+body.lopningen .tema-image {
+    position: relative;
+    height: 136px;
+    overflow: hidden;
+}
+
+body.lopningen .tema-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.lopningen .tema-node-count {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 3;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.lopningen .tema-content {
+    flex: 1;
+    padding: 12px 12px 11px;
+    display: flex;
+    flex-direction: column;
+}
+
+body.lopningen .tema-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111111;
+}
+
+body.lopningen .tema-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;   /* 🔴 CHANGE THIS */
+  overflow: hidden;
+}
+
+body.tema-tavling .view-taxonomy-term .tema-image,
+body.tema-traning .view-taxonomy-term .tema-image,
+body.lopningen .view-taxonomy-term,
+body.tema-skador .view-taxonomy-term .tema-image {
+    display: none;
+} 
+
+body.tema-tavling .view-taxonomy-term .view-header,
+body.tema-traning .view-taxonomy-term .view-header,
+body.tema-skador .view-taxonomy-term .view-header {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+h3.tema-title {
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.view-header .theme-info{
+  color: #999;
+}
+=================================
+/* Container for the whole list */
+.view-intressanta-lopp {
+  max-width: 100%;
+  background-color: #000; /* Fallback background */
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header styling (INTRESSANTA LOPP) */
+.view-intressanta-lopp h2, 
+.view-intressanta-lopp .view-header {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 15px;
+  background: white;
+  margin: 0;
+}
+
+/* Individual Row Setup */
+.view-intressanta-lopp .views-row {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin divider line */
+}
+
+.interesting-race__bg img {
+  width: 100%;
+  height: 73px;
+  object-fit: cover; /* This makes the image cover the area like a background */
+  display: block;
+}
+
+/* The Dark Overlay */
+.interesting-race__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+background: linear-gradient(
+  to right,
+  rgba(0, 0, 0, 0.85) 0%,  /* Was 0.98 */
+  rgba(0, 0, 0, 0.75) 40%, /* Was 0.92 */
+  rgba(0, 0, 0, 0.50) 65%, /* Was 0.70 */
+  rgba(0, 0, 0, 0.25) 85%, /* Was 0.35 */
+  rgba(0, 0, 0) 100%
+);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding-left: 15px; 
+  transition: background 0.3s ease;
+}
+
+.block-views-blockintressanta-lopp-block-1 {
+    background: #fff;
+}
+
+.block-views-blockintressanta-lopp-block-1 h2 {
+    text-transform: uppercase;
+    letter-spacing: .3px;
+    font-size: 18px;
+    line-height: 1em;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #000;
+}
+
+/* Hover effect */
+.view-intressanta-lopp .views-row:hover .interesting-race__overlay {
+ background: linear-gradient(
+  to right,
+  rgba(0, 0, 0, 0.85) 0%,  /* Was 0.98 */
+  rgba(0, 0, 0, 0.75) 40%, /* Was 0.92 */
+  rgba(0, 0, 0, 0.50) 65%, /* Was 0.70 */
+  rgba(0, 0, 0, 0.25) 85%, /* Was 0.35 */
+  rgba(0, 0, 0) 100%
+);
+}
+
+/* Title Styling */
+.interesting-race__title {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1em;
+    color: #fff;
+}
+
+/* Date Styling */
+.interesting-race__date {
+    font-size: 13px;
+    opacity: 0.75;
+    color: #fff;
+}
+
+
+/* =========================================================
+   RESPONSIVE (MOBILE)
+========================================================= */
+@media (max-width: 991px) {
+  .views-view-grid {
+    flex-direction: column;
+  }
+
+  .tema-image {
+    height: 200px;
+  }
+
+  .tema-title {
+    font-size: 24px;
+  }
+}
+
+
+

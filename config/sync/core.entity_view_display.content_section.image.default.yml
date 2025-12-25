@@ -1,0 +1,39 @@
+uuid: 1e7fabe9-9ec3-4a7f-ba72-eb2b6d79b796
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - field.field.content_section.image.field_content_section_byline
+    - field.field.content_section.image.field_content_section_desc
+    - field.field.content_section.image.field_content_section_image
+    - image.style.article_list_on_home_page_225x124
+  module:
+    - image
+id: content_section.image.default
+targetEntityType: content_section
+bundle: image
+mode: default
+content:
+  field_content_section_byline:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content_section_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: article_list_on_home_page_225x124
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_content_section_desc: true
+  langcode: true

@@ -1,0 +1,29 @@
+uuid: 534d2531-5353-4776-9d77-5ff118f9d56f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.small_teaser
+    - field.field.taxonomy_term.theme.field_section
+    - field.field.taxonomy_term.theme.field_target_group
+    - field.field.taxonomy_term.theme.field_theme_image
+    - taxonomy.vocabulary.theme
+  module:
+    - text
+id: taxonomy_term.theme.small_teaser
+targetEntityType: taxonomy_term
+bundle: theme
+mode: small_teaser
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_section: true
+  field_target_group: true
+  field_theme_image: true
+  langcode: true

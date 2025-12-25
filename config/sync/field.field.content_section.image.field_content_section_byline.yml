@@ -1,0 +1,19 @@
+uuid: 8ff74607-3b20-4f9f-9570-c7337474f7bf
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - field.storage.content_section.field_content_section_byline
+id: content_section.image.field_content_section_byline
+field_name: field_content_section_byline
+entity_type: content_section
+bundle: image
+label: Fotobyline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

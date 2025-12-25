@@ -1,0 +1,11 @@
+uuid: b5cff179-020a-4614-9b46-29a283e11175
+langcode: sv
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.small_teaser
+label: small_teaser
+description: ''
+targetEntityType: taxonomy_term
+cache: true

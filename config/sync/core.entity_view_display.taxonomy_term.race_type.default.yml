@@ -1,0 +1,33 @@
+uuid: 973c62a2-4ab0-48cb-ae45-bbeab8dd17e3
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.race_type.field_race_type_color
+    - taxonomy.vocabulary.race_type
+  module:
+    - color_field
+    - text
+id: taxonomy_term.race_type.default
+targetEntityType: taxonomy_term
+bundle: race_type
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_race_type_color:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

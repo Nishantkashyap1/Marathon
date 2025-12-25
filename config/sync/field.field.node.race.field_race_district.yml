@@ -1,0 +1,30 @@
+uuid: 6f347777-12e4-4b51-bb92-e2dc9e430f7e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_race_district
+    - node.type.race
+    - taxonomy.vocabulary.district
+id: node.race.field_race_district
+field_name: field_race_district
+entity_type: node
+bundle: race
+label: Distrikt
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

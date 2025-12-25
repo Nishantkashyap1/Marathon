@@ -1,0 +1,32 @@
+uuid: e26185b7-6685-486f-a3e3-05ed72a3dbbd
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_section
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme.field_section
+field_name: field_section
+entity_type: taxonomy_term
+bundle: theme
+label: Avdelning
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+    view:
+      args: {  }
+      display_name: entityreference_1
+      view_name: section_reference_filter
+field_type: entity_reference

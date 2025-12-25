@@ -1,0 +1,9 @@
+uuid: e463a2d0-465b-4672-a773-5dbc7c1f109a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.content_section
+name: Quote
+type: quote
+description: Quote

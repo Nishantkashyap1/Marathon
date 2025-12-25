@@ -1,0 +1,16 @@
+uuid: f5840b05-0a75-45d9-9b15-e88d06549dae
+langcode: sv
+status: true
+dependencies:
+  config:
+    - filter.format.bloggare
+  module:
+    - file
+    - filter
+id: bloggare
+label: Bloggare
+weight: 2
+is_admin: null
+permissions:
+  - 'delete own files'
+  - 'use text format bloggare'

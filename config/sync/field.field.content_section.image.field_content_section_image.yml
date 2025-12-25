@@ -1,0 +1,38 @@
+uuid: 9ddf7a10-c557-4995-a771-f6c45c0451bc
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - field.storage.content_section.field_content_section_image
+  module:
+    - image
+id: content_section.image.field_content_section_image
+field_name: field_content_section_image
+entity_type: content_section
+bundle: image
+label: Bild
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

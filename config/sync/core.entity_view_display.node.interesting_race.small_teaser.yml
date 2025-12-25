@@ -1,0 +1,27 @@
+uuid: 1a2bdcc0-5cf5-4518-8ed9-88b6a54d26a5
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.interesting_race.field_interesting_race_bg
+    - field.field.node.interesting_race.field_interesting_race_date
+    - field.field.node.interesting_race.field_interesting_race_link
+    - node.type.interesting_race
+  module:
+    - user
+id: node.interesting_race.small_teaser
+targetEntityType: node
+bundle: interesting_race
+mode: small_teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_interesting_race_bg: true
+  field_interesting_race_date: true
+  field_interesting_race_link: true
+  langcode: true

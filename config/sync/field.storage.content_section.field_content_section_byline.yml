@@ -1,0 +1,21 @@
+uuid: 14c562c9-0653-447a-a196-af25d41cb330
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.field_content_section_byline
+field_name: field_content_section_byline
+entity_type: content_section
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

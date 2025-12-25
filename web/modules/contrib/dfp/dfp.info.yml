@@ -1,0 +1,13 @@
+name: 'Doubleclick for Publishers'
+type: module
+description: 'Integrates DFP Google Publisher Tags onto a site.'
+core_version_requirement: ^9.4 || ^10.0
+package: Advertising
+configure: dfp.admin_settings
+dependencies:
+  - 'drupal:block'
+
+# Information added by Drupal.org packaging script on 2024-05-29
+version: '2.0.2'
+project: 'dfp'
+datestamp: 1716990391

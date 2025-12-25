@@ -1,0 +1,10 @@
+uuid: 97e0c209-adac-4473-9698-086f40cd620f
+langcode: sv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
+name: 'Full HTML'
+format: full_html
+weight: -7
+filters: {  }

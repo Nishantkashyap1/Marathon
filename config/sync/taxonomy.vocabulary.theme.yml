@@ -1,0 +1,9 @@
+uuid: 466f2d48-8367-48b7-b49e-bfcaa05aeb54
+langcode: sv
+status: true
+dependencies: {  }
+name: Tema
+vid: theme
+description: null
+weight: 0
+new_revision: false

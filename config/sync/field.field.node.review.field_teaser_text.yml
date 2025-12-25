@@ -1,0 +1,19 @@
+uuid: ced1d3fc-aa27-4617-87bd-30379b841f9f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_teaser_text
+    - node.type.review
+id: node.review.field_teaser_text
+field_name: field_teaser_text
+entity_type: node
+bundle: review
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,30 @@
+uuid: fbaa728c-68d6-45dd-9538-e9bb50b6c083
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.article
+    - taxonomy.vocabulary.theme
+id: node.article.field_theme
+field_name: field_theme
+entity_type: node
+bundle: article
+label: Tema
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

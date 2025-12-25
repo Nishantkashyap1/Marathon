@@ -1,0 +1,21 @@
+uuid: d62ec1fa-2135-4670-bbe0-0814a3a3104d
+langcode: sv
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term_section
+label: 'Taxonomy term - Avdelning'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      section: section
+selection_logic: and
+weight: 0
+relationships: {  }

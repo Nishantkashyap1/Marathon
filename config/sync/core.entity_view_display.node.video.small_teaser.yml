@@ -1,0 +1,31 @@
+uuid: 74655df0-b0d8-4bdd-8611-939108848f89
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.video.field_content_sections
+    - field.field.node.video.field_section
+    - field.field.node.video.field_target_group
+    - field.field.node.video.field_theme
+    - field.field.node.video.field_video_video
+    - node.type.video
+  module:
+    - user
+id: node.video.small_teaser
+targetEntityType: node
+bundle: video
+mode: small_teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_content_sections: true
+  field_section: true
+  field_target_group: true
+  field_theme: true
+  field_video_video: true
+  langcode: true

@@ -1,0 +1,35 @@
+uuid: d7883850-9194-4a9f-9489-203e3dd0270c
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.race.field_race_date
+    - field.field.node.race.field_race_description
+    - field.field.node.race.field_race_district
+    - field.field.node.race.field_race_link
+    - field.field.node.race.field_race_promoted
+    - field.field.node.race.field_race_type
+    - field.field.node.race.field_race_where
+    - node.type.race
+  module:
+    - user
+id: node.race.teaser
+targetEntityType: node
+bundle: race
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_race_date: true
+  field_race_description: true
+  field_race_district: true
+  field_race_link: true
+  field_race_promoted: true
+  field_race_type: true
+  field_race_where: true
+  langcode: true

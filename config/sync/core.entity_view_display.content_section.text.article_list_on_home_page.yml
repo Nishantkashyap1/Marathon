@@ -1,0 +1,32 @@
+uuid: 605359f9-d46c-455d-9f60-1bd5b4fc9500
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.article_list_on_home_page
+    - eck.eck_type.content_section.text
+    - field.field.content_section.text.field_content_section_body
+    - field.field.content_section.text.field_editorial
+  module:
+    - text
+id: content_section.text.article_list_on_home_page
+targetEntityType: content_section
+bundle: text
+mode: article_list_on_home_page
+content:
+  field_content_section_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_editorial:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

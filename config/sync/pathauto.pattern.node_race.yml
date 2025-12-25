@@ -1,0 +1,21 @@
+uuid: 9426022e-c79a-4d70-a1b9-4d717717c5a4
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node_race
+label: 'Content - Lopp'
+type: 'canonical_entities:node'
+pattern: 'loppen/[node:title]-[node:field-race-date:custom:Y]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      race: race
+selection_logic: and
+weight: 0
+relationships: {  }

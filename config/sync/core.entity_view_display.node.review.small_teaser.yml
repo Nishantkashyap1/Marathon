@@ -1,0 +1,49 @@
+uuid: 854d67af-5fd0-4dce-aa15-438012558d40
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.review.field_bad
+    - field.field.node.review.field_content_sections
+    - field.field.node.review.field_good
+    - field.field.node.review.field_grade
+    - field.field.node.review.field_media
+    - field.field.node.review.field_price
+    - field.field.node.review.field_product_link
+    - field.field.node.review.field_review_category
+    - field.field.node.review.field_sub_heading
+    - field.field.node.review.field_target_group
+    - field.field.node.review.field_teaser_image
+    - field.field.node.review.field_teaser_text
+    - field.field.node.review.field_teaser_title
+    - field.field.node.review.field_theme
+    - node.type.review
+  module:
+    - user
+id: node.review.small_teaser
+targetEntityType: node
+bundle: review
+mode: small_teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_bad: true
+  field_content_sections: true
+  field_good: true
+  field_grade: true
+  field_media: true
+  field_price: true
+  field_product_link: true
+  field_review_category: true
+  field_sub_heading: true
+  field_target_group: true
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
+  field_theme: true
+  langcode: true

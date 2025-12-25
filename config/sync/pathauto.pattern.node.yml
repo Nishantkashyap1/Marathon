@@ -1,0 +1,14 @@
+uuid: a0f6e585-8072-4585-8845-8adbbc18382a
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node
+label: 'Content - default'
+type: 'canonical_entities:node'
+pattern: 'innehåll/[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

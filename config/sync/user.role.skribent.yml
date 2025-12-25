@@ -1,0 +1,24 @@
+uuid: 99148b24-877c-4a43-a6a2-7926c31bf08c
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.article
+    - node.type.page
+  module:
+    - file
+    - metatag
+    - node
+id: skribent
+label: Skribent
+weight: 3
+is_admin: null
+permissions:
+  - 'administer meta tags'
+  - 'create article content'
+  - 'delete any article content'
+  - 'delete own article content'
+  - 'delete own files'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit own article content'

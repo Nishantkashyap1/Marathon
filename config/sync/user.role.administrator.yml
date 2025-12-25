@@ -1,0 +1,38 @@
+uuid: a9ce490a-e419-44f8-80b9-2faa19925bc7
+langcode: sv
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - block
+    - filter
+    - node
+    - path
+    - system
+    - taxonomy
+_core:
+  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+id: administrator
+label: Administratör
+weight: 4
+is_admin: true
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer menu'
+  - 'administer nodes'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create url aliases'
+  - 'select account cancellation method'
+  - 'use text format full_html'
+  - 'view the administration theme'

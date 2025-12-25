@@ -1,0 +1,26 @@
+uuid: 34ab9456-05be-4134-83e4-1127174ca629
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - file
+    - image
+id: promotion.field_promotion_bg_image
+field_name: field_promotion_bg_image
+entity_type: promotion
+type: image
+settings:
+  target_type: file
+  display_field: false
+  display_default: true
+  uri_scheme: public
+  default_image:
+    uuid: ''
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

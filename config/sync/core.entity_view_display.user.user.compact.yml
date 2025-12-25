@@ -1,0 +1,42 @@
+uuid: 25c6fd4f-ea7f-4130-8af4-a1c1d9485c19
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.field_user_blog_name
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_presentation
+    - field.field.user.user.field_user_presentation_image
+    - field.field.user.user.field_user_sponsors
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: 00zr_RBdTjPjBGITD3h4c1ESQZimjdVCcHGt1trLqIY
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_user_blog_name: true
+  field_user_image: true
+  field_user_presentation: true
+  field_user_presentation_image: true
+  field_user_sponsors: true
+  langcode: true
+  member_for: true

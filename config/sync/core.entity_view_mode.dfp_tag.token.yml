@@ -1,0 +1,11 @@
+uuid: d0a05fe1-0276-4bd1-bd7a-135a85737c23
+langcode: en
+status: true
+dependencies:
+  module:
+    - dfp
+id: dfp_tag.token
+label: Token
+description: ''
+targetEntityType: dfp_tag
+cache: true

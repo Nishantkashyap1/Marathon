@@ -1,0 +1,21 @@
+uuid: 674d8ce8-779e-4b2f-ae68-8d1f69550fed
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_race_date
+    - node.type.race
+  module:
+    - datetime
+id: node.race.field_race_date
+field_name: field_race_date
+entity_type: node
+bundle: race
+label: 'När går loppet'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

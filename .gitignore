@@ -1,0 +1,13 @@
+/vendor/
+/web/sites/*/files/
+/web/sites/*/private/
+/web/sites/*/settings.php
+/web/sites/*/services.yml
+.env
+.idea
+.vscode
+.DS_Store
+.ddev/
+.editorconfig
+.gitattributes
+

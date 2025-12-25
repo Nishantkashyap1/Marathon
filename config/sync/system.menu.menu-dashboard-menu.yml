@@ -1,0 +1,8 @@
+uuid: e6073b20-07ba-4b3a-b456-1ac05ec487a3
+langcode: en
+status: true
+dependencies: {  }
+id: menu-dashboard-menu
+label: 'Innehålls administration'
+description: ''
+locked: false

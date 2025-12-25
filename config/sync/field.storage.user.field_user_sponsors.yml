@@ -1,0 +1,20 @@
+uuid: c9b727b1-d144-4495-9b36-5340f47170c9
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - user
+id: user.field_user_sponsors
+field_name: field_user_sponsors
+entity_type: user
+type: entity_reference
+settings:
+  target_type: promotion
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

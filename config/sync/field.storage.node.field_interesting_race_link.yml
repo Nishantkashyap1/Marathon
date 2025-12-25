@@ -1,0 +1,19 @@
+uuid: 928144b6-3326-4954-a9e7-6685f59e58ee
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_interesting_race_link
+field_name: field_interesting_race_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

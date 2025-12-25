@@ -1,0 +1,25 @@
+uuid: 4743a1c4-08db-4c14-b303-200527eeee3e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.small_teaser
+    - field.field.taxonomy_term.race_type.field_race_type_color
+    - taxonomy.vocabulary.race_type
+  module:
+    - text
+id: taxonomy_term.race_type.small_teaser
+targetEntityType: taxonomy_term
+bundle: race_type
+mode: small_teaser
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_race_type_color: true
+  langcode: true

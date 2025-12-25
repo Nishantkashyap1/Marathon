@@ -1,0 +1,6 @@
+body_class_from_url:
+  version: 1.x
+  js:
+    js/body-class-from-url.js: {}
+  dependencies:
+    - core/drupal

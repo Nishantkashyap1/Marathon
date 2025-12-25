@@ -1,0 +1,11 @@
+uuid: c3a01d96-aaf2-4d07-b61e-ab8532ec9f08
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.article_list_on_home_page
+label: 'Article List On Home Page'
+description: ''
+targetEntityType: content_section
+cache: true

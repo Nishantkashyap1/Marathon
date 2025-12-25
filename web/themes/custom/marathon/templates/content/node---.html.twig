@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a node.
+ *
+ * Available variables:
+ * - node: Full node entity
+ * - label: Node title
+ * - content: Rendered node content
+ * - url: Direct URL of the node
+ * - view_mode: The view mode (teaser, full, etc.)
+ * - title_attributes, content_attributes: Attributes for output
+ */
+#}
+
+<article{{ attributes.addClass('node', 'card', 'mb-3', view_mode == 'teaser' ? 'h-100' : '') }}>
+
+  {% if view_mode == 'teaser' %}
+    <!-- Teaser (used in grids, lists, homepage, etc.) -->
+    {% if content.field_image %}
+      <a href="{{ url }}">
+        <div class="card-img-top">
+          {{ content.field_image }}
+        </div>
+      </a>
+    {% endif %}
+
+    <div class="card-body">
+      <h5 class="card-title">
+        <a href="{{ url }}" class="text-decoration-none text-dark">
+          {{ label }}
+        </a>
+      </h5>
+
+      {% if content.field_summary %}
+        <p class="card-text">{{ content.field_summary }}</p>
+      {% endif %}
+    </div>
+
+    <div class="card-footer text-muted small">
+      {{ author_picture }}
+      <span class="ms-2">{{ author_name }}</span> · {{ date }}
+    </div>
+
+  {% else %}
+    <!-- Full node page -->
+    {% if content.field_image %}
+      <div class="mb-3">
+        {{ content.field_image }}
+      </div>
+    {% endif %}
+
+    <h1 class="mb-3">{{ label }}</h1>
+
+    <div class="mb-3 text-muted small">
+      {{ author_picture }}
+      <span class="ms-2">{{ author_name }}</span> · {{ date }}
+    </div>
+
+    <div class="content"{{ content_attributes.addClass('mt-3') }}>
+      {{ content|without('field_image', 'field_summary') }}
+    </div>
+  {% endif %}
+
+</article>

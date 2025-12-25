@@ -1,0 +1,32 @@
+uuid: 4c800277-fcb5-4a7d-8c52-a965133401e3
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - eck.eck_type.content_section.video
+    - field.storage.node.field_media
+    - node.type.article
+id: node.article.field_media
+field_name: field_media
+entity_type: node
+bundle: article
+label: 'Top bild/video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:content_section'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

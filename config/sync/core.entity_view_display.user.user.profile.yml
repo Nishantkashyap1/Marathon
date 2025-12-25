@@ -1,0 +1,32 @@
+uuid: b23c75c6-b685-45ed-962a-613ad6a826a2
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.profile
+    - field.field.user.user.field_user_blog_name
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_presentation
+    - field.field.user.user.field_user_presentation_image
+    - field.field.user.user.field_user_sponsors
+    - field.field.user.user.user_picture
+  module:
+    - user
+id: user.user.profile
+targetEntityType: user
+bundle: user
+mode: profile
+content:
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_user_blog_name: true
+  field_user_image: true
+  field_user_presentation: true
+  field_user_presentation_image: true
+  field_user_sponsors: true
+  langcode: true
+  user_picture: true

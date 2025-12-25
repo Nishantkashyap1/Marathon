@@ -1,0 +1,38 @@
+uuid: 90eab513-d31d-4490-ac41-fa5ac9cbf747
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.promotion.promotion
+    - field.storage.promotion.field_promotion_bg_image
+  module:
+    - image
+id: promotion.promotion.field_promotion_bg_image
+field_name: field_promotion_bg_image
+entity_type: promotion
+bundle: promotion
+label: Bakgrundsbild
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

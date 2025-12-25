@@ -1,0 +1,15 @@
+uuid: 9860e2e5-c4a1-4764-9417-0d47a61827d8
+langcode: sv
+status: true
+dependencies: {  }
+name: article_list_on_home_page_225x124
+label: 'Article List On Home Page(225×124)'
+effects:
+  02a70515-af1c-4985-84dc-6bb100253339:
+    uuid: 02a70515-af1c-4985-84dc-6bb100253339
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 225
+      height: 122
+      anchor: center-center

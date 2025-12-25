@@ -1,0 +1,14 @@
+uuid: ed139440-4f95-42d9-acdb-e4fc6bb7c418
+langcode: sv
+status: true
+dependencies:
+  config:
+    - user.role.skribent
+  module:
+    - user
+id: user_add_role_action.skribent
+label: 'Add the Skribent role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: skribent

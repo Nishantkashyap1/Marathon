@@ -1,0 +1,9 @@
+uuid: b767cbc0-ee49-4bc5-a977-f115e3a62d8a
+langcode: sv
+status: true
+dependencies: {  }
+name: Recensionskategori
+vid: review_category
+description: null
+weight: 0
+new_revision: false

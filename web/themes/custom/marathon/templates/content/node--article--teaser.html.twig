@@ -1,0 +1,53 @@
+<article{{ attributes.addClass('article-row', 'article-teaser') }}>
+
+  {% if content.field_media %}
+    <div class="article-image article-field-media">
+      {{ content.field_media }}
+    </div>
+  {% endif %}
+
+
+  {% set aria_label = label is defined and label ? label : (node is defined ? node.getTitle() : '') %}
+  <div class="article-content">
+
+    <h2 class="article-title article-field-title">
+      {{ label }}
+    </h2>
+    {% set section_names = [] %}
+    {% if node is defined and node.field_section is defined %}
+      {% for item in node.field_section %}
+        {% if item.entity is defined and item.entity.name.value is defined %}
+          {% set section_names = section_names|merge([item.entity.name.value|trim]) %}
+        {% elseif item.value is defined %}
+          {% set section_names = section_names|merge([item.value|striptags|trim]) %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% set theme_names = [] %}
+    {% if node is defined and node.field_theme is defined %}
+      {% for item in node.field_theme %}
+        {% if item.entity is defined and item.entity.name.value is defined %}
+          {% set theme_names = theme_names|merge([item.entity.name.value|trim]) %}
+        {% elseif item.value is defined %}
+          {% set theme_names = theme_names|merge([item.value|striptags|trim]) %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <p class="ArticleTeaser-info">
+      {{ node.created.value|date("d M Y") }}
+      {% for s in section_names %}{{ ' •' ~ s }}{% endfor %}{% for t in theme_names %}{{ ' •' ~ t }}{% endfor %}
+    </p>
+
+    {% if content.field_lead %}
+      <p class="article-lead article-field-lead">
+        {{ content.field_lead }}
+      </p>
+    {% endif %}
+  </div>
+
+  {# Full overlay link covering image and content #}
+  <a href="{{ url }}" class="article-link-overlay" aria-label="{{ aria_label }}"></a>
+
+</article>

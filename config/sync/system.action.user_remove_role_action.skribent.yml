@@ -1,0 +1,14 @@
+uuid: 0dde7594-e094-4979-b0b2-c425a2c7f34b
+langcode: sv
+status: true
+dependencies:
+  config:
+    - user.role.skribent
+  module:
+    - user
+id: user_remove_role_action.skribent
+label: 'Remove the Skribent role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: skribent

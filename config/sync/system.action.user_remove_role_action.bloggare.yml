@@ -1,0 +1,14 @@
+uuid: e5bbc1fc-d24a-4cc3-a93f-d501ad56564e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - user.role.bloggare
+  module:
+    - user
+id: user_remove_role_action.bloggare
+label: 'Remove the Bloggare role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: bloggare

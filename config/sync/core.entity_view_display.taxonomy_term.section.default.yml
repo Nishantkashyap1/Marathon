@@ -1,0 +1,31 @@
+uuid: 6157bbf5-4361-40e6-b34f-253eaba3c919
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.section.field_promotions
+    - taxonomy.vocabulary.section
+  module:
+    - text
+id: taxonomy_term.section.default
+targetEntityType: taxonomy_term
+bundle: section
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_promotions:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  langcode: true

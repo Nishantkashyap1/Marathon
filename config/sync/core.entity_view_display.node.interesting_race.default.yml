@@ -1,0 +1,58 @@
+uuid: c272b551-3f7b-44d6-8980-fb790393be5a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.node.interesting_race.field_interesting_race_bg
+    - field.field.node.interesting_race.field_interesting_race_date
+    - field.field.node.interesting_race.field_interesting_race_link
+    - node.type.interesting_race
+  module:
+    - datetime
+    - image
+    - link
+    - user
+id: node.interesting_race.default
+targetEntityType: node
+bundle: interesting_race
+mode: default
+content:
+  field_interesting_race_bg:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_interesting_race_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_interesting_race_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

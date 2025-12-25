@@ -1,0 +1,25 @@
+insert_extend_allowed_html:
+  ckeditor5:
+    plugins:
+      - insert.ExtendAllowedHtml
+  drupal:
+    label: Insert
+    library: insert/CKEditor5
+    admin_library: insert/CKEditor5.admin
+    toolbar_items:
+      insert_extend_allowed_html:
+        label: "[Insert module] Extend HTML tags and attributes"
+    elements:
+      - <a>
+      - <a class data-insert-attach data-insert-type title>
+      - <audio>
+      - <audio contenteditable controls data-insert-attach data-insert-type src type>
+      - <img>
+      - <img alt class data-insert-attach data-insert-type sizes src srcset title width height>
+      - <span>
+      - <span class data-insert-attach data-insert-type>
+      - <video>
+      - <video contenteditable controls data-insert-attach data-insert-type src type>
+    conditions:
+      plugins:
+        - ckeditor5_image

@@ -1,0 +1,21 @@
+uuid: d0286970-8b39-439f-9932-2f9158d8186f
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node_blog_post
+label: 'Content - Blogginlägg'
+type: 'canonical_entities:node'
+pattern: 'bloggar/[node:author:name]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      blog_post: blog_post
+selection_logic: and
+weight: 0
+relationships: {  }

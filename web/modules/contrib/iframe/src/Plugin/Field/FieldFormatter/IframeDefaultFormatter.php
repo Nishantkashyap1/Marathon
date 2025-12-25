@@ -1,0 +1,283 @@
+<?php
+
+namespace Drupal\iframe\Plugin\Field\FieldFormatter;
+
+use Drupal\Component\Render\HtmlEscapedText;
+use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Field\Attribute\FieldFormatter;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Field\FormatterBase;
+use Drupal\Core\Logger\LoggerChannelTrait;
+use Drupal\Core\Logger\RfcLogLevel;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Session\AccountProxyInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Url;
+use Drupal\Core\Utility\Token;
+use Drupal\node\NodeInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * The Class IframeDefaultFormatter.
+ */
+#[FieldFormatter(
+  id: 'iframe_default',
+  label: new TranslatableMarkup('Title, over iframe (default)'),
+  field_types: [
+    'iframe',
+  ],
+)]
+class IframeDefaultFormatter extends FormatterBase {
+
+  use LoggerChannelTrait;
+
+  public const PLUGIN_ID = 'iframe_default';
+
+  /**
+   * Constructs a new LinkFormatter.
+   *
+   * @param string $plugin_id
+   *   The plugin_id for the formatter.
+   * @param mixed $plugin_definition
+   *   The plugin implementation definition.
+   * @param \Drupal\Core\Field\FieldDefinitionInterface $field_definition
+   *   The definition of the field to which the formatter is associated.
+   * @param array $settings
+   *   The formatter settings.
+   * @param string $label
+   *   The formatter label display setting.
+   * @param string $view_mode
+   *   The view mode.
+   * @param array $third_party_settings
+   *   Third party settings.
+   * @param \Drupal\Core\Extension\ModuleHandlerInterface $moduleHandler
+   *   The module handler service.
+   * @param \Drupal\Core\Session\AccountProxyInterface $currentUser
+   *   The current user.
+   * @param \Drupal\Core\Utility\Token $token
+   *   Token service.
+   * @param \Drupal\Core\Routing\RouteMatchInterface $routeMatch
+   *   The currently active route match object.
+   */
+  public function __construct(
+    $plugin_id,
+    $plugin_definition,
+    FieldDefinitionInterface $field_definition,
+    array $settings,
+    $label,
+    $view_mode,
+    array $third_party_settings,
+    protected ModuleHandlerInterface $moduleHandler,
+    protected AccountProxyInterface $currentUser,
+    protected Token $token,
+    protected RouteMatchInterface $routeMatch,
+  ) {
+    parent::__construct($plugin_id, $plugin_definition, $field_definition, $settings, $label, $view_mode, $third_party_settings);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
+    return new static(
+      $plugin_id,
+      $plugin_definition,
+      $configuration['field_definition'],
+      $configuration['settings'],
+      $configuration['label'],
+      $configuration['view_mode'],
+      $configuration['third_party_settings'],
+      $container->get('module_handler'),
+      $container->get('current_user'),
+      $container->get('token'),
+      $container->get('current_route_match'),
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function defaultSettings(): array {
+    return [
+      'url' => '',
+      'title' => '',
+      'headerlevel' => '3',
+      'width' => '',
+      'height' => '',
+      'class' => '',
+      'frameborder' => '0',
+      'scrolling' => '',
+      'transparency' => '0',
+      'tokensupport' => '0',
+      'allowfullscreen' => '0',
+    ] + parent::defaultSettings();
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function viewElements(FieldItemListInterface $items, $langcode): array {
+    $elements = [];
+    // Settings from type.
+    $settings = $this->getSettings();
+    // field_settings on concrete field.
+    $field_settings = $this->getFieldSettings();
+    $allow_attributes = ['url', 'width', 'height', 'title', 'class'];
+    foreach ($items as $delta => $item) {
+      if (empty($item->url)) {
+        continue;
+      }
+      if (!isset($item->title)) {
+        $item->title = '';
+      }
+      foreach ($field_settings as $field_key => $field_val) {
+        if (in_array($field_key, $allow_attributes)) {
+          continue;
+        }
+        $item->{$field_key} = $field_val;
+      }
+      $elements[$delta] = $this->iframeIframe($item->title, $item->url, $item);
+      // Tokens can be dynamic, so it's not cacheable.
+      if (isset($settings['tokensupport']) && $settings['tokensupport']) {
+        $elements[$delta]['cache'] = ['max-age' => 0];
+      }
+    }
+    return $elements;
+  }
+
+  /**
+   * Like central function form the iframe code.
+   */
+  protected function iframeIframe($text, $path, $item): array {
+    $options = [];
+    $options['width'] = empty($item->width) ? '100%' : $item->width;
+    $options['height'] = empty($item->height) ? '701' : $item->height;
+    // Collect all allow policies.
+    $allow = [];
+    // Collect styles, but leave it overwritable.
+    $style = '';
+    $itemName = $item->getFieldDefinition()->getName();
+    $itemParentId = $item->getParent()->getParent()->getEntity()->ID();
+
+    if (!empty($item->frameborder) && $item->frameborder > 0) {
+      $style .= '/*frameborder*/ border-width:2px;';
+    }
+    else {
+      $style .= '/*frameborder*/ border-width:0;';
+    }
+    if (!empty($item->scrolling)) {
+      if ($item->scrolling == 'yes') {
+        $style .= '/*scrolling*/ overflow:scroll;';
+      }
+      elseif ($item->scrolling == 'no') {
+        $style .= '/*scrolling*/ overflow:hidden;';
+      }
+      else {
+        // Default: auto.
+        $style .= '/*scrolling*/ overflow:auto;';
+      }
+    }
+    if (!empty($item->transparency) && $item->transparency > 0) {
+      $style .= '/*transparency*/ background-color:transparent;';
+    }
+
+    $htmlid = 'iframe-' . $itemName . '-' . $itemParentId;
+    if (property_exists($item, 'htmlid') && !empty($item->htmlid)) {
+      $htmlid = $item->htmlid;
+    }
+    $htmlid = preg_replace('#[^A-Za-z0-9\-_]+#', '-', $htmlid);
+    $options['id'] = $options['name'] = $htmlid;
+
+    // Append active class.
+    $options['class'] = $item->class ?? '';
+
+    // Responsive start. Test class for iframe-responsive.
+    $style = '#' . $htmlid . ' {' . $style . '}';
+    if (str_contains($options['class'], 'iframe-responsive')) {
+      // Force numeric values for width and height.
+      $size = [
+        'width' => (int) $options['width'],
+        'height' => (int) $options['height'],
+      ];
+      $options['width'] = '100%';
+      $options['height'] = '100%';
+      $styleBefore = ' padding-bottom: calc(100% / (' . $size['width'] . ' / ' . $size['height'] . '));';
+      $style .= ' .iframe-responsive:has(#' . $htmlid . '):before {' . $styleBefore . '}';
+    }
+    // Responsive end.
+    // Remove all HTML and PHP tags from a tooltip.
+    // For best performance, we act only
+    // if a quick strpos() pre-check gave a suspicion
+    // (because strip_tags() is expensive).
+    $options['title'] = empty($item->title) ? '' : $item->title;
+    if (!empty($options['title']) && str_contains($options['title'], '<')) {
+      $options['title'] = strip_tags($options['title']);
+    }
+    // Default h3.
+    $headerlevel = 3;
+    if (isset($item->headerlevel) && $item->headerlevel >= 1 && $item->headerlevel <= 6) {
+      $headerlevel = (int) $item->headerlevel;
+    }
+
+    // Policy attribute.
+    $allow[] = 'accelerometer';
+    $allow[] = 'autoplay';
+    $allow[] = 'camera';
+    $allow[] = 'encrypted-media';
+    $allow[] = 'geolocation';
+    $allow[] = 'gyroscope';
+    $allow[] = 'microphone';
+    $allow[] = 'payment';
+    $allow[] = 'picture-in-picture';
+    $options['allow'] = implode(';', $allow);
+    if (!empty($item->allowfullscreen)) {
+      $options['allowfullscreen'] = 'allowfullscreen';
+    }
+
+    if ($this->moduleHandler->moduleExists('token')) {
+      // Token Support for field "url" and "title".
+      $tokensupport = $item->getTokenSupport();
+      $tokencontext = ['user' => $this->currentUser];
+      $node = $this->routeMatch->getParameter('node');
+      if ($node instanceof NodeInterface) {
+        $tokencontext['node'] = $node;
+      }
+      if ($tokensupport > 0) {
+        $text = $this->token->replace($text, $tokencontext);
+      }
+      if ($tokensupport > 1) {
+        $path = $this->token->replace($path, $tokencontext);
+      }
+    }
+
+    $options_link = [];
+    $options_link['attributes'] = [];
+    $options_link['attributes']['title'] = $options['title'];
+    try {
+      $srcuri = Url::fromUri($path, $options_link);
+      $src = $srcuri->toString();
+      $options['src'] = $src;
+      $drupal_attributes = new Attribute($options);
+      return [
+        '#theme' => 'iframe',
+        '#src' => $src,
+        '#attributes' => $drupal_attributes,
+        '#text' => (isset($options['html']) && $options['html'] ? $text : new HtmlEscapedText($text)),
+        '#style' => $style,
+        '#headerlevel' => $headerlevel,
+        '#attached' => [
+          'library' => [
+            'iframe/iframe',
+          ],
+        ],
+      ];
+    }
+    catch (\Exception $exception) {
+      $this->getLogger('iframe')->log(RfcLogLevel::ERROR, $exception->getMessage());
+      return [];
+    }
+  }
+
+}

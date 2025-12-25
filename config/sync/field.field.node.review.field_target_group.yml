@@ -1,0 +1,30 @@
+uuid: 1eb61186-108d-41d6-866d-9de52481aa1e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_target_group
+    - node.type.review
+    - taxonomy.vocabulary.target_group
+id: node.review.field_target_group
+field_name: field_target_group
+entity_type: node
+bundle: review
+label: Målgrupp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      target_group: target_group
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: ef3616ac-48a1-49cc-9889-dc20231043d5
+langcode: sv
+status: true
+dependencies:
+  config:
+    - views.view.right_with_small_image
+  module:
+    - system
+    - views
+  theme:
+    - marathon
+id: marathon_views_block__right_with_small_image_block_1_2
+theme: marathon
+region: hero_right
+weight: 0
+provider: null
+plugin: 'views_block:right_with_small_image-block_1'
+settings:
+  id: 'views_block:right_with_small_image-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

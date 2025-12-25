@@ -1,0 +1,19 @@
+uuid: a87cac65-a259-4773-9fc6-09e4adf35acf
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access content_section entity listing'
+  - 'access promotion entity listing'
+  - 'access user profiles'
+  - 'view any content_section entities'

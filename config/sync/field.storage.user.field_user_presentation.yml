@@ -1,0 +1,19 @@
+uuid: ead5ceaf-5c78-4324-b44c-6a9bfed9f52d
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_user_presentation
+field_name: field_user_presentation
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

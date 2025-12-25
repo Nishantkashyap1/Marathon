@@ -1,0 +1,9 @@
+uuid: afa0e744-0082-4b76-9fbb-0fdced0cbd6a
+langcode: sv
+status: true
+dependencies: {  }
+name: Avdelning
+vid: section
+description: null
+weight: -9
+new_revision: false

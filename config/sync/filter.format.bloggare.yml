@@ -1,0 +1,8 @@
+uuid: 4c3a3af0-f918-4714-b935-2db819ea8009
+langcode: sv
+status: true
+dependencies: {  }
+name: Bloggare
+format: bloggare
+weight: -9
+filters: {  }

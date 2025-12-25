@@ -1,0 +1,33 @@
+{# {{ dump(content) }} #}
+<article{{ attributes.addClass('article-row', 'article-teaser') }}>
+
+  {% if content.field_media %}
+    <div class="article-image article-field-media">
+      {{ content.field_media }}
+    </div>
+  {% endif %}
+
+  <div class="article-content">
+    {% if label %}
+      <h3 class="article-title article-field-title">
+        {{ label }}
+      </h3>
+    {% endif %}
+
+    {% if content.created %}
+      <p class="article-date article-field-date">
+        {{ content.created }}
+      </p>
+    {% endif %}
+
+    {% if content.field_lead %}
+      <p class="article-lead article-field-lead">
+        {{ content.field_lead }}
+      </p>
+    {% endif %}
+  </div>
+
+  {# Full overlay link covering image and content #}
+  <a href="{{ url }}" class="article-link-overlay" aria-label="{{ label }}"></a>
+
+</article>

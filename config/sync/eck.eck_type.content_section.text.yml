@@ -1,0 +1,9 @@
+uuid: 3a4f5fa5-78b2-4f16-a150-d9bc4110cd42
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.content_section
+name: Text
+type: text
+description: Text

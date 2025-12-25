@@ -1,0 +1,11 @@
+uuid: 6f0fc973-e19f-4991-a0e3-4d80caa085a5
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.full
+label: Full
+description: ''
+targetEntityType: content_section
+cache: true

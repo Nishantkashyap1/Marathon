@@ -1,0 +1,31 @@
+uuid: ced1f68c-ed89-44aa-82ea-241bd829103d
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.content_section.inline_entity_form_preview
+    - eck.eck_type.content_section.quote
+    - field.field.content_section.quote.field_content_section_author
+    - field.field.content_section.quote.field_content_section_quote
+id: content_section.quote.inline_entity_form_preview
+targetEntityType: content_section
+bundle: quote
+mode: inline_entity_form_preview
+content:
+  field_content_section_author:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content_section_quote:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true

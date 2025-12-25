@@ -1,0 +1,64 @@
+/* Add spacing between top-level menu items */
+#superfish-main.sf-menu > li {
+    margin-right: 15px; /* Increase or decrease gap */
+}
+
+/* Add spacing for dropdown items (optional) */
+#superfish-main.sf-menu ul li {
+    margin-bottom: 6px; /* small vertical gap */
+}
+
+/* Main menu links */
+#superfish-main.sf-menu > li > a {
+    color: #fff;
+    padding: 15px 15px;
+    display: block;
+    text-decoration: none !important;
+}
+
+/* Hover/active on main menu */
+#superfish-main.sf-menu > li > a:hover,
+#superfish-main.sf-menu > li.sfHover > a,
+#superfish-main.sf-menu > li.active-trail > a {
+    color: #e25400;
+    transition: color .3s;
+    text-decoration: none !important;
+    display: block;
+    /* height: 50px; */
+    /* border-bottom: 3px solid #fff; */
+}
+
+/* Dropdown items */
+#superfish-main.sf-menu ul li a {
+    color: #fff;
+}
+
+ul.menu a.is-active {
+    color: #000 !important;
+}
+
+/* Hover on dropdown items */
+#superfish-main.sf-menu ul li a:hover,
+#superfish-main.sf-menu ul li.sfHover > a,
+#superfish-main.sf-menu ul li.active-trail > a {
+    color: #e25400;
+    transition: color .3s;
+    text-decoration: none !important;
+    display: block;
+    /* height: 50px; */
+    /* border-bottom: 3px solid #fff; */
+}
+
+/* Arrow color */
+#superfish-main.sf-menu > li > a.sf-with-ul:hover .sf-sub-indicator,
+#superfish-main.sf-menu > li.sfHover > a .sf-sub-indicator {
+    color: #e25400 !important;
+}
+
+/* Increase right padding for items with submenus */
+ul.sf-menu .sf-with-ul {
+    padding-right: 3em !important;
+}
+
+
+

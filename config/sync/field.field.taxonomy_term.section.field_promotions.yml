@@ -1,0 +1,30 @@
+uuid: 12baa190-8192-4675-9f22-06934e8143ef
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.promotion.promotion
+    - field.storage.taxonomy_term.field_promotions
+    - taxonomy.vocabulary.section
+id: taxonomy_term.section.field_promotions
+field_name: field_promotions
+entity_type: taxonomy_term
+bundle: section
+label: Topp-puffar
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:promotion'
+  handler_settings:
+    target_bundles:
+      promotion: promotion
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

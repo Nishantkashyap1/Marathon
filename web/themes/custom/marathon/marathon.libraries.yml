@@ -1,0 +1,15 @@
+global-styling:
+  version: 1.x
+  js:
+    js/global.js: {}
+  css:
+    component:
+      css/style.css: {}
+      css/theme.css: {}
+      css/menu.css: {}
+      css/mobile.css: {}
+      css/slideshow.css: {}
+
+  dependencies:
+    - core/jquery
+    - core/drupal

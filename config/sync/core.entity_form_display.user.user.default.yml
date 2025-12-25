@@ -1,0 +1,56 @@
+uuid: efe550f4-6ba4-4673-98b3-81de6872022d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_user_blog_name
+    - field.field.user.user.field_user_image
+    - field.field.user.user.field_user_presentation
+    - field.field.user.user.field_user_presentation_image
+    - field.field.user.user.field_user_sponsors
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - path
+    - user
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  language:
+    weight: 0
+    region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+  user_picture:
+    type: image_image
+    weight: -1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  field_user_blog_name: true
+  field_user_image: true
+  field_user_presentation: true
+  field_user_presentation_image: true
+  field_user_sponsors: true
+  langcode: true

@@ -1,0 +1,34 @@
+uuid: d8f129c6-9627-44e0-86bf-b0c8fbaaf189
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.text
+    - field.storage.content_section.field_editorial
+    - filter.format.basic_html
+    - filter.format.formated_text
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+  module:
+    - text
+id: content_section.text.field_editorial
+field_name: field_editorial
+entity_type: content_section
+bundle: text
+label: Editorial
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - formated_text
+    - plain_text
+    - full_html
+    - basic_html
+    - restricted_html
+field_type: text_with_summary

@@ -1,0 +1,15 @@
+uuid: ee1017f7-ffcd-47c2-9ecc-06e64fa3fd4e
+langcode: en
+status: true
+dependencies: {  }
+name: left_with_big_image_860_375
+label: 'Left With Big Image(860*375)'
+effects:
+  876d7e76-c043-4d22-92fd-5e83dc4d44bc:
+    uuid: 876d7e76-c043-4d22-92fd-5e83dc4d44bc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 860
+      height: 373
+      anchor: center-center

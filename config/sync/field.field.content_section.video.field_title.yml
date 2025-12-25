@@ -1,0 +1,19 @@
+uuid: a1872891-03af-4e56-bb80-60192378225e
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.video
+    - field.storage.content_section.field_title
+id: content_section.video.field_title
+field_name: field_title
+entity_type: content_section
+bundle: video
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

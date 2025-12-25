@@ -1,0 +1,21 @@
+uuid: db36473e-90c1-4b80-89ad-3a198b644abf
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node_article
+label: 'Content - Artikel'
+type: 'canonical_entities:node'
+pattern: 'nyheter/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,14 @@
+uuid: 3f33ee88-9098-4560-9776-1cded8089174
+langcode: sv
+status: true
+dependencies:
+  module:
+    - user
+id: user
+label: 'User - default'
+type: 'canonical_entities:user'
+pattern: 'users/[user:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

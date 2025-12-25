@@ -1,0 +1,9 @@
+uuid: a8ac21b4-546d-4b35-b798-abc58f6c03c5
+langcode: sv
+status: true
+dependencies: {  }
+name: Lopptyp
+vid: race_type
+description: null
+weight: 0
+new_revision: false

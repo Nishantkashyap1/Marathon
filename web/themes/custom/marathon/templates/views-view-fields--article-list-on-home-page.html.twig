@@ -1,0 +1,58 @@
+{# Extract nid from available data (try fields.nid first, then scan all fields for a pure-digit token) #}
+{% set nid = '' %}
+
+{% if fields.nid is defined and fields.nid.content is defined %}
+  {% set candidate = fields.nid.content is iterable ? fields.nid.content|render : fields.nid.content %}
+  {% set text = candidate|striptags|trim %}
+  {% for token in text|split(' ') %}
+    {% if nid == '' %}
+      {% set t = token|trim %}
+      {% if t matches '/^[0-9]+$/' %}
+        {% set nid = t %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if nid == '' and fields is defined %}
+  {% for key, field in fields %}
+    {% if nid == '' %}
+      {% set raw = field.content is iterable ? field.content|render : field.content %}
+      {% set text = raw|striptags|trim %}
+      {% for token in text|split(' ') %}
+        {% if nid == '' %}
+          {% set t = token|trim %}
+          {% if t matches '/^[0-9]+$/' %}
+            {% set nid = t %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if nid == '' and row is defined and row._entity is defined %}
+  {% set nid = row._entity.id() %}
+{% endif %}
+{% set url = nid ? ('/node/' ~ nid) : '#' %}
+
+  <a class="ArticleTeaser ArticleTeaser--hasImage" href="{{ url }}">
+    <div class="debug-modified-fields">
+      {% if fields is defined and fields|length %}
+        {% for key, field in fields %}
+          {% if field.content is iterable %}
+            {% set raw = field.content|render %}
+          {% else %}
+            {% set raw = field.content %}
+          {% endif %}
+
+          {% set val = raw|striptags|trim %}
+
+          {% if val != '' %}
+            {# Print only the value (rendered HTML) without the machine name label #}
+            <div class="field-value">{{ raw|raw }}</div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </div>
+  </a>

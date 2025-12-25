@@ -1,0 +1,21 @@
+uuid: 46197e18-c63e-4361-a74a-566012062063
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node_video
+label: 'Content - Video'
+type: 'canonical_entities:node'
+pattern: 'play/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      video: video
+selection_logic: and
+weight: 0
+relationships: {  }

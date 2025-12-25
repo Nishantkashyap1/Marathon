@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: sv
+uuid: 12377123-018d-4264-a962-bb1c08c23c53
+name: 'Marathon D10'
+mail: nishantkum0@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/10619
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: sv
+mail_notification: null

@@ -1,0 +1,9 @@
+uuid: 81a3b14b-78f6-4a36-a442-5a9c7d67562b
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.content_section
+name: Image
+type: image
+description: Image

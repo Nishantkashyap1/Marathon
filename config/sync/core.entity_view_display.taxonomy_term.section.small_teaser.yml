@@ -1,0 +1,25 @@
+uuid: 3f271e53-4bd0-4785-bf53-17213db63522
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.small_teaser
+    - field.field.taxonomy_term.section.field_promotions
+    - taxonomy.vocabulary.section
+  module:
+    - text
+id: taxonomy_term.section.small_teaser
+targetEntityType: taxonomy_term
+bundle: section
+mode: small_teaser
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_promotions: true
+  langcode: true

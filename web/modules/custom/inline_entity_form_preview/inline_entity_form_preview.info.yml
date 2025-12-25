@@ -1,0 +1,12 @@
+name: Inline Entity Form Preview
+type: module
+description: Provides a preview column to display referenced entities directly.
+core_version_requirement: "^8 || ^9 || ^10"
+package: Fields
+dependencies:
+  - inline_entity_form:inline_entity_form
+
+# Information added by Drupal.org packaging script on 2023-03-23
+version: '8.x-1.x-dev'
+project: 'inline_entity_form_preview'
+datestamp: 1679592024

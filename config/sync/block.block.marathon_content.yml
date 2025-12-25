@@ -1,0 +1,22 @@
+uuid: 8a103b4e-35f3-4c93-a858-f3d140d345cb
+langcode: sv
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - marathon
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: marathon_content
+theme: marathon
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

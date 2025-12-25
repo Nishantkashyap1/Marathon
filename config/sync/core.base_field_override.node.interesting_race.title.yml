@@ -1,0 +1,18 @@
+uuid: 1639e824-3c69-494b-be50-e10d98686dda
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.interesting_race
+id: node.interesting_race.title
+field_name: title
+entity_type: node
+bundle: interesting_race
+label: 'Namn på lopp'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

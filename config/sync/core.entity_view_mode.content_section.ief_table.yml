@@ -1,0 +1,11 @@
+uuid: b2aa7b28-d960-4e98-980f-6fe7dfa6f3d7
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.ief_table
+label: 'Inline Entity Form Table'
+description: ''
+targetEntityType: content_section
+cache: true

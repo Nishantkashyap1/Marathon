@@ -1,0 +1,83 @@
+uuid: 267c714c-6016-4da8-a68a-0400df5412fb
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.node.review.field_bad
+    - field.field.node.review.field_content_sections
+    - field.field.node.review.field_good
+    - field.field.node.review.field_grade
+    - field.field.node.review.field_media
+    - field.field.node.review.field_price
+    - field.field.node.review.field_product_link
+    - field.field.node.review.field_review_category
+    - field.field.node.review.field_sub_heading
+    - field.field.node.review.field_target_group
+    - field.field.node.review.field_teaser_image
+    - field.field.node.review.field_teaser_text
+    - field.field.node.review.field_teaser_title
+    - field.field.node.review.field_theme
+    - node.type.review
+  module:
+    - inline_entity_form_preview
+id: node.review.default
+targetEntityType: node
+bundle: review
+mode: default
+content:
+  field_content_sections:
+    type: inline_entity_form_preview
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      view_mode: default!
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      removed_reference: optional
+      revision: 0
+      collapsible: 0
+      collapsed: 0
+      allow_duplicate: 0
+    third_party_settings: {  }
+  field_sub_heading:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_bad: true
+  field_good: true
+  field_grade: true
+  field_media: true
+  field_price: true
+  field_product_link: true
+  field_review_category: true
+  field_target_group: true
+  field_teaser_image: true
+  field_teaser_text: true
+  field_teaser_title: true
+  field_theme: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true
+  url_redirects: true

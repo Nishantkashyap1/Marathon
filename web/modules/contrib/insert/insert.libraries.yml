@@ -1,0 +1,80 @@
+insert:
+  version: 3.x
+  js:
+    js/insert.js: {}
+  dependencies:
+    - core/drupalSettings
+    - insert/namespace
+    - insert/FileHandler
+    - insert/FocusManager
+    - insert/ImageHandler
+    - insert/Inserter
+
+Inserter:
+  version: 3.x
+  js:
+    js/Inserter.js: {}
+  dependencies:
+    - insert/namespace
+
+Handler:
+  version: 3.x
+  js:
+    js/Handler.js: {}
+  dependencies:
+    - insert/namespace
+
+FileHandler:
+  version: 3.x
+  js:
+    js/FileHandler.js: {}
+  css:
+    theme:
+      css/FileHandler.css: {}
+  dependencies:
+    - insert/Handler
+    - insert/namespace
+
+ImageHandler:
+  version: 3.x
+  js:
+    js/ImageHandler.js: {}
+  css:
+    theme:
+      css/ImageHandler.css: {}
+  dependencies:
+    - insert/FileHandler
+    - insert/namespace
+    - insert/Rotator
+
+FocusManager:
+  version: 3.x
+  js:
+    js/FocusManager.js: {}
+  dependencies:
+    - insert/namespace
+
+Rotator:
+  version: 3.x
+  js:
+    js/Rotator.js: {}
+  dependencies:
+    - insert/namespace
+
+namespace:
+  version: 3.x
+  js:
+    js/namespace.js: {}
+
+CKEditor5:
+    version: 3.x
+    js:
+      js/plugins/ckeditor5.js: {}
+    dependencies:
+      - ckeditor5/internal.drupal.ckeditor5
+
+CKEditor5.admin:
+  version: 3.x
+  css:
+    component:
+      css/ckeditor5.admin.css: {}

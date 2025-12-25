@@ -1,0 +1,9 @@
+uuid: f783f8d2-1079-4209-a06c-b35acdde23e9
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.promotion
+name: Sponsor
+type: sponsor
+description: Sponsor

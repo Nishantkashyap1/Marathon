@@ -1,0 +1,17 @@
+uuid: 120e87b4-1772-4a48-b779-78e39617e4ff
+langcode: sv
+status: true
+dependencies: {  }
+name: 'Formaterad text'
+format: formated_text
+weight: -10
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: ''
+      filter_html_help: true
+      filter_html_nofollow: false

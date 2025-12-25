@@ -1,0 +1,19 @@
+uuid: f13bb05f-e6e7-475f-985d-eabac98ec4a5
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - field.storage.content_section.field_content_section_desc
+id: content_section.image.field_content_section_desc
+field_name: field_content_section_desc
+entity_type: content_section
+bundle: image
+label: Beskrivning
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+  <head>
+    {{ head_placeholder }}
+    {{ css_placeholder }}
+    {{ js_placeholder }}
+  </head>
+
+  <body{{ body_attributes.addClass(body_classes) }}>
+    {{ page_top }}
+
+    {{ page }}
+
+    {{ page_bottom }}
+
+    {{ js_bottom_placeholder }}
+  </body>
+</html>

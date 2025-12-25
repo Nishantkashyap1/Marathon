@@ -1,0 +1,129 @@
+{#
+/**
+ * @file
+ * Marathon Front Page Template.
+ */
+#}
+
+<div class="SiteTemplate">
+
+  <!-- HEADER & NAVIGATION -->
+  <header class="whole-header siteTemplate-header border-bottom">
+    <div class="SiteTemplate-inner main-header">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <!-- Logo -->
+        <h1 class="logo">
+          <a href="{{ path('<front>') }}"
+             title="{{ 'Home'|t }}"
+             rel="home"
+             class="Logo-imagee">
+            <img src="{{ base_path }}{{ directory }}/logo.svg"
+                 alt="{{ site_name }}"
+                 class="logo-image"
+                 width="150">
+          </a>
+        </h1>
+        <!-- Logo End -->
+
+        <!-- Menu -->
+        <div class="main-menu-area">
+          {{ page.navigation }}
+        </div>
+
+        <!-- Header Right -->
+        <div class="d-flex header-right-section">
+          <div class="header-right-icons d-flex">
+            <div class="header-right">
+              {{ page.header_right }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container-fluid">
+
+    {# HERO SECTION #}
+    {% if page.hero_left or page.hero_right %}
+      <section class="container-fluid hero-news-section">
+        <div class="custom-row row g-3">
+
+          <div class="hero-left col-lg-8">
+            {{ page.hero_left }}
+          </div>
+
+          <div class="hero-right col-lg-4 d-flex flex-column gap-3">
+            {{ page.hero_right }}
+          </div>
+
+        </div>
+      </section>
+    {% endif %}
+
+    {# MAIN LAYOUT WITH SIDEBARS #}
+    <section class="container-fluid main-layout{% if page.sidebar_second %} has-sidebar-second{% endif %}">
+      <div class="row">
+
+        {# SIDEBAR FIRST #}
+        {% if page.sidebar_first %}
+          <aside class="col-lg-3 sidebar sidebar-first">
+            {{ page.sidebar_first }}
+          </aside>
+        {% endif %}
+
+        {# MAIN CONTENT #}
+        <div class="
+          {% if page.sidebar_first and page.sidebar_second %}
+            col-lg-6
+          {% elseif page.sidebar_first or page.sidebar_second %}
+            col-lg-9
+          {% else %}
+            col-lg-12
+          {% endif %}
+          main-content">
+          {{ page.content }}
+        </div>
+
+        {# SIDEBAR SECOND #}
+        {% if page.sidebar_second %}
+          <aside class="col-lg-3 sidebar sidebar-second">
+            {{ page.sidebar_second }}
+          </aside>
+        {% endif %}
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="siteTemplate-footer">
+    <div class="SiteTemplate-inner container-fluid">
+      <div class="small">
+
+        <h1 class="footer-logo">
+          <a href="{{ path('<front>') }}"
+             title="{{ 'Home'|t }}"
+             rel="home"
+             class="Logo-imagee">
+            <img src="{{ base_path }}{{ directory }}/logo.svg"
+                 alt="{{ site_name }}"
+                 width="150">
+          </a>
+        </h1>
+
+        {% if page.footer_bottom %}
+          {{ page.footer_bottom }}
+        {% else %}
+          <p>&copy; {{ now|date('Y') }} {{ site_name }}. All rights reserved.</p>
+        {% endif %}
+
+      </div>
+    </div>
+  </footer>
+
+</div>

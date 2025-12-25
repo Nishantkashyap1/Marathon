@@ -1,0 +1,25 @@
+uuid: 59ee9116-81bc-4576-aa6e-4a22e87f1f70
+langcode: sv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.section.field_promotions
+    - taxonomy.vocabulary.section
+  module:
+    - text
+id: taxonomy_term.section.teaser
+targetEntityType: taxonomy_term
+bundle: section
+mode: teaser
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_promotions: true
+  langcode: true

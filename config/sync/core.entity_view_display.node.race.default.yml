@@ -1,0 +1,91 @@
+uuid: 2ba88164-b0e7-4374-95cc-5a86c98d0d8f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.field.node.race.field_race_date
+    - field.field.node.race.field_race_description
+    - field.field.node.race.field_race_district
+    - field.field.node.race.field_race_link
+    - field.field.node.race.field_race_promoted
+    - field.field.node.race.field_race_type
+    - field.field.node.race.field_race_where
+    - node.type.race
+  module:
+    - datetime
+    - link
+    - user
+id: node.race.default
+targetEntityType: node
+bundle: race
+mode: default
+content:
+  field_race_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_race_description:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_race_district:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_race_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_race_promoted:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_race_type:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_race_where:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

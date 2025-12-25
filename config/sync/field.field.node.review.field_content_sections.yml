@@ -1,0 +1,35 @@
+uuid: cf243e1e-a4d5-45b1-a9cc-33a73ef440bd
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.image
+    - eck.eck_type.content_section.quote
+    - eck.eck_type.content_section.text
+    - eck.eck_type.content_section.video
+    - field.storage.node.field_content_sections
+    - node.type.review
+id: node.review.field_content_sections
+field_name: field_content_sections
+entity_type: node
+bundle: review
+label: 'Content section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:content_section'
+  handler_settings:
+    target_bundles:
+      image: image
+      quote: quote
+      text: text
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

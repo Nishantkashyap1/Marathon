@@ -1,0 +1,16 @@
+uuid: 4fd30dfc-5fe9-46d5-a37b-d0b7845bff13
+langcode: sv
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+name: Lopp
+type: race
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,9 @@
+uuid: dc1cc002-7603-471d-bc4b-d88c45bc34ad
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.content_section
+name: Video
+type: video
+description: Video

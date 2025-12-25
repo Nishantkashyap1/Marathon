@@ -1,0 +1,19 @@
+uuid: 295c70aa-76fa-4249-a896-463aa49eb8ff
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.content_section.quote
+    - field.storage.content_section.field_content_section_quote
+id: content_section.quote.field_content_section_quote
+field_name: field_content_section_quote
+entity_type: content_section
+bundle: quote
+label: Quote
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

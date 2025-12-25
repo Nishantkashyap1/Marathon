@@ -1,0 +1,18 @@
+uuid: 6f9de9b3-0dab-42f8-a62c-1efad3dd363f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - node.type.iframe
+id: node.iframe.title
+field_name: title
+entity_type: node
+bundle: iframe
+label: iframe
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

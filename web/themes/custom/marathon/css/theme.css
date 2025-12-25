@@ -1,0 +1,116 @@
+/**
+ * @file
+ * Subtheme specific CSS.
+ *
+ * theme.css → Handles backgrounds, colors, and typography.
+ *
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    background-color: #eeeeee !important; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.siteTemplate-header, 
+.siteTemplate-footer {
+    background-color: #d33a2c;
+    color: #fff;
+}
+
+.siteTemplate-header {
+    box-shadow: 0px 4px 2px -2px rgba(0,0,0,0.3); 
+    position: relative;
+}
+main.container-fluid {
+    width: 1275px;
+}
+
+.SiteTemplate-inner{
+    max-width: 1275px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 9px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center; 
+}
+
+/* .row > * {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+} */
+
+.custom-row {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    flex-wrap: revert !important;
+}
+
+.siteTemplate-footer{
+  padding: 0px !important;
+  padding-bottom: 30px !important;
+}
+
+body.has-sidebar-second .main-content {
+  max-width: 860px;
+  width: 100%;
+}
+
+.sidebar-second{
+  width: 30% !important;
+}
+
+
+.region-sidebar-first, .region-sidebar-second, .region-footer, .region-content {
+    padding: 0px !important;
+}
+
+.row {
+    --bs-gutter-x: 0px !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+
+footer {
+  padding: 30px 0; 
+}
+
+footer .col-12 col-md-3 {
+  text-align: left; 
+}
+
+footer .row {
+  margin-bottom: 20px; 
+}
+
+body.tema-skador .row{
+  --bs-gutter-x: 0px !important;
+
+}
+
+body.tema-skador .row > * {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* @media (min-width: 992px) { */
+  .main-layout.has-sidebar-second .main-content {
+    max-width: 860px;
+    width: 100%;
+    margin-right: 10px;
+  }
+/* } */
+
+
+/* ========================================
+   RESPONSIVE ADJUSTMENTS - HEADER SECTION
+   ======================================== */

@@ -1,0 +1,11 @@
+uuid: a98c8195-c17f-41ec-887f-b23f5ad55653
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.small_teaser
+label: small_teaser
+description: ''
+targetEntityType: content_section
+cache: true

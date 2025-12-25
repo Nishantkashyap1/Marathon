@@ -1,0 +1,30 @@
+uuid: 6ee27874-55ac-4ff5-b340-1605b4995142
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_target_group
+    - taxonomy.vocabulary.target_group
+    - taxonomy.vocabulary.theme
+id: taxonomy_term.theme.field_target_group
+field_name: field_target_group
+entity_type: taxonomy_term
+bundle: theme
+label: Målgrupp
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      target_group: target_group
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

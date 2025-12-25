@@ -1,0 +1,30 @@
+uuid: 1087c880-044f-4f79-bfa6-cd9b8308ed82
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_race_type
+    - node.type.race
+    - taxonomy.vocabulary.race_type
+id: node.race.field_race_type
+field_name: field_race_type
+entity_type: node
+bundle: race
+label: 'Typ av lopp'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      race_type: race_type
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

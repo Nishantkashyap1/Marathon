@@ -1,0 +1,30 @@
+uuid: 440b3252-9ef6-47f8-96aa-c714722fc285
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.review
+    - taxonomy.vocabulary.theme
+id: node.review.field_theme
+field_name: field_theme
+entity_type: node
+bundle: review
+label: Stortest
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      theme: theme
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

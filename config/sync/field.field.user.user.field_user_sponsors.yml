@@ -1,0 +1,31 @@
+uuid: 9b8e83ca-7834-4192-a5b5-0abb4617fd27
+langcode: sv
+status: true
+dependencies:
+  config:
+    - eck.eck_type.promotion.sponsor
+    - field.storage.user.field_user_sponsors
+  module:
+    - user
+id: user.user.field_user_sponsors
+field_name: field_user_sponsors
+entity_type: user
+bundle: user
+label: Sponsorer
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:promotion'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

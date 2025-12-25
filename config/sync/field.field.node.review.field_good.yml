@@ -1,0 +1,19 @@
+uuid: 889517ce-2b0a-498f-829c-2421bab5ac7a
+langcode: sv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_good
+    - node.type.review
+id: node.review.field_good
+field_name: field_good
+entity_type: node
+bundle: review
+label: Vettigt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

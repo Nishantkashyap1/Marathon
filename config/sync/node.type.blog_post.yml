@@ -1,0 +1,16 @@
+uuid: 9854473d-881d-4c4a-b398-23f43ae9afe1
+langcode: sv
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+name: Blogginlägg
+type: blog_post
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

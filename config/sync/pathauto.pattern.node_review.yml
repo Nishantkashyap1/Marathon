@@ -1,0 +1,21 @@
+uuid: f85ca6fd-4c6e-4da2-a7b0-d9690a3a3278
+langcode: sv
+status: true
+dependencies:
+  module:
+    - node
+id: node_review
+label: 'Content - Recension'
+type: 'canonical_entities:node'
+pattern: 'utrustning/[node:field-review-category:name]/[node:title]'
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      review: review
+selection_logic: and
+weight: 0
+relationships: {  }
