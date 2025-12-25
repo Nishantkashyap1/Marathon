@@ -1,6 +1,6 @@
 uuid: 15432f71-7e9f-45d2-a8c8-2f09850260a1
 langcode: sv
-status: true
+status: false
 dependencies:
   config:
     - views.view.hero_and_highlights

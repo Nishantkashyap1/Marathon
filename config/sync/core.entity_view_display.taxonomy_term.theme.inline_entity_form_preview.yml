@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.inline_entity_form_preview
+    - field.field.taxonomy_term.theme.field_image
     - field.field.taxonomy_term.theme.field_section
     - field.field.taxonomy_term.theme.field_target_group
     - field.field.taxonomy_term.theme.field_theme_image
@@ -51,4 +52,5 @@ content:
     weight: 2
     region: content
 hidden:
+  field_image: true
   langcode: true

@@ -153,12 +153,12 @@ display:
           group_column: target_id
           group_columns: {  }
           group_rows: true
-          delta_limit: 0
+          delta_limit: 1
           delta_offset: 0
           delta_reversed: false
           delta_first_last: false
           multi_type: separator
-          separator: ', '
+          separator: ''
           field_api_classes: false
         title:
           id: title
@@ -285,6 +285,147 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: created
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: olivero_medium
+            custom_date_format: ''
+            timezone: ''
+            tooltip:
+              date_format: long
+              custom_date_format: ''
+            time_diff:
+              enabled: false
+              future_format: '@interval hence'
+              past_format: '@interval ago'
+              granularity: 2
+              refresh: 60
+              description: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        term_node_tid:
+          id: term_node_tid
+          table: node_field_data
+          field: term_node_tid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          type: separator
+          separator: ', '
+          link_to_taxonomy: false
+          limit: false
+          vids:
+            blog_category: '0'
+            dfp_ad_categories: '0'
+            district: '0'
+            race_type: '0'
+            review_category: '0'
+            section: '0'
+            tags: '0'
+            target_group: '0'
+            theme: '0'
         nothing:
           id: nothing
           table: views
@@ -297,7 +438,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "<div class=\"article-row\">\r\n<div class=\"node-id\">\r\n{{ nid }} \r\n</div>\r\n<div class=\"article-image\">\r\n{{ field_media }}\r\n</div>\r\n\r\n<div class=\"article-content\">\r\n<h3 class=\"article-title article-field-title\">\r\n{{ title }}\r\n</h3>\r\n<p class=\"article-lead article-field-lead\">\r\n{{ field_lead }}\r\n</p>\r\n</div>\r\n\r\n</div>"
+            text: "<div class=\"article-row\">\r\n\r\n  {# Only show node ID if it exists #}\r\n  {% if nid is defined and nid %}\r\n    <div class=\"node-id\">{{ nid }}</div>\r\n  {% endif %}\r\n\r\n  {# Only show image if field_media exists #}\r\n  {% if field_media is defined and field_media %}\r\n    <div class=\"article-image\">{{ field_media }}</div>\r\n  {% endif %}\r\n\r\n  <div class=\"article-content\">\r\n    \r\n    {# Title always shown if exists #}\r\n    {% if title is defined and title %}\r\n      <h3 class=\"article-title article-field-title\">{{ title }}</h3>\r\n    {% endif %}\r\n\r\n    {# Show date only if exists #}\r\n    {% if created is defined and created %}\r\n      <p class=\"article-date\">{{ created }}</p>\r\n    {% endif %}\r\n\r\n    {# Show category only if exists #}\r\n    {% if term_node_tid is defined and term_node_tid %}\r\n      <p class=\"article-category\">{{ term_node_tid }}</p>\r\n    {% endif %}\r\n\r\n    {# Show lead only if exists #}\r\n    {% if field_lead is defined and field_lead %}\r\n      <p class=\"article-lead article-field-lead\">{{ field_lead }}</p>\r\n    {% endif %}\r\n\r\n  </div>\r\n\r\n</div>\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -489,6 +630,52 @@ display:
           hierarchy: false
           limit: true
           error_message: true
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: nid
+          plugin_id: numeric
+          operator: '!='
+          value:
+            min: ''
+            max: ''
+            value: '10619'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -502,7 +689,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      use_ajax: true
+      use_ajax: false
       use_more: false
       use_more_always: true
       use_more_text: more

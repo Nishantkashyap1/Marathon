@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.taxonomy_term.small_teaser
+    - field.field.taxonomy_term.theme.field_image
     - field.field.taxonomy_term.theme.field_section
     - field.field.taxonomy_term.theme.field_target_group
     - field.field.taxonomy_term.theme.field_theme_image
@@ -23,6 +24,7 @@ content:
     weight: 0
     region: content
 hidden:
+  field_image: true
   field_section: true
   field_target_group: true
   field_theme_image: true

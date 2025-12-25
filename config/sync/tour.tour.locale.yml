@@ -29,7 +29,7 @@ tips:
   locale-search:
     id: locale-search
     plugin: text
-    label: Search
+    label: Sök
     weight: 3
     selector: '#edit-string'
     body: 'Enter the specific word or sentence you want to translate, you can also write just a part of a word.'
