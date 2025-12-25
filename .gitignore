@@ -3,6 +3,10 @@
 /web/sites/*/private/
 /web/sites/*/settings.php
 /web/sites/*/services.yml
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
 .env
 .idea
 .vscode
