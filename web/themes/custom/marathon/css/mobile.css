@@ -21,19 +21,34 @@
 
 main.container-fluid {
     width: 100%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.sidebar-second,
+body.lopningen .tema-card {
+    width: 100% !important;
 }
 
 .custom-row {
     flex-wrap: wrap !important;
 }
 
+.view-taxonomy-term .article-row,
+.view-nyheterna .article-row,
 .view-article-list-on-home-page .article-row {
     display: block;
 }
+
+.view-taxonomy-term .article-row .img-fluid,
+.view-nyheterna .article-row .img-fluid,
 .view-article-list-on-home-page .img-fluid {
     width: 100% !important;
 }
 
+.view-teman-om-lopningen .views-col,
+.view-taxonomy-term .img-fluid,
+.view-nyheterna .img-fluid,
 .view-article-list-on-home-page .img-fluid {
     width: 100% !important;
     margin-top: 15px;
@@ -44,5 +59,24 @@ main.container-fluid {
     margin-top: 5px;
     margin-bottom: 15px;
 }
+
+.view-topshelf-promotions .Promo-lead{
+    display: none;
+}
+
+.block-views-blockteman-om-lopningen-block-1 h2 {
+    padding-left: 16px;
+    margin: 0px;
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+/* body.lopningen .tema-card {
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+} */
+
+
 
 }
