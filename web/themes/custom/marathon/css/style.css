@@ -85,6 +85,7 @@
 /*************************/
 
 /* Make each views row a positioning context */
+.view-traningen .views-row,
 .view-topshelf-promotions .views-row,
 .view-left-with-big-image .views-row {
   position: relative;
@@ -106,6 +107,8 @@
   width: 400px;
 }
 
+.view-inspirationen-left img,
+.view-traningen img,
 .view-topshelf-promotions img,
 .view-left-with-big-image img {
   width: 100%;
@@ -113,10 +116,14 @@
   display: block;
 }
 
+.view-inspirationen-left img, 
+.view-traningen img,
 .view-topshelf-promotions img{
   height: 393px;
 }
 
+.view-inspirationen-left .Promo-info,
+.view-traningen .Promo-info,
 .view-topshelf-promotions .Promo-info,
 .view-left-with-big-image .Promo-info {
   position: absolute;
@@ -128,6 +135,8 @@
   color: #fff;
 }
 
+.view-inspirationen-left .Promo-info::before,
+.view-traningen .Promo-info::before,
 .view-topshelf-promotions .Promo-info::before,
 .view-left-with-big-image .Promo-info::before {
   content: "";
@@ -144,6 +153,8 @@
   z-index: -1;
 }
 
+.view-inspirationen-left .Promo-heading--main,
+.view-traningen .Promo-heading--main,
 .view-topshelf-promotions .Promo-heading--main,
 .view-left-with-big-image .Promo-heading--main {
     margin: 0 0 12px;
@@ -152,6 +163,8 @@
     font-size: 35px;
 }
 
+.view-inspirationen-left .promo-lead,
+.view-traningen .promo-lead,
 .view-topshelf-promotions .Promo-lead,
 .view-left-with-big-image .Promo-lead {
   margin: 0;
@@ -161,11 +174,16 @@
   color: #f2f2f2;
 }
 
+.view-inspirationen-left .Promo-heading--main a,
+.view-traningen .Promo-heading--main a,
 .view-topshelf-promotions .Promo-heading--main a,
 .view-left-with-big-image .Promo-heading--main a {
   color: #fff;
 }
 
+.view-inspirationen-left  .Promo-heading--main,
+.view-traningen .Promo-heading--main,
+.view-traningen .Promo-lead,
 .view-topshelf-promotions .Promo-heading--main,
 .view-topshelf-promotions .Promo-lead,
 .view-left-with-big-image .Promo-heading--main,
@@ -178,22 +196,30 @@
    *******************************
 /*************************/
 
+.view-inspirationen-right .promo
+.view-traningen-right .promo,
 .view-topshelf-promotions-right .promo
 .view-right-with-small-image .promo {
     position: relative;
 }
 
+.view-inspirationen-right .views-row,
+.view-traningen-right .views-row,
 .view-topshelf-promotions-right .views-row,
 .view-right-with-small-image .views-row {
   position: relative;
   overflow: hidden;
 }
 
-.iew-topshelf-promotions-right .views-row:first-child,
+.view-inspirationen-right .views-row:first-child,
+.view-traningen-right .views-row:first-child,
+.view-topshelf-promotions-right .views-row:first-child,
 .view-right-with-small-image .views-row:first-child {
   border-bottom: 1px solid #fff;
 }
 
+.view-inspirationen-right img,
+.view-traningen-right img,
 .view-topshelf-promotions-right .promo img,
 .view-right-with-small-image img {
   width: 100%;
@@ -202,6 +228,8 @@
   display: block;
 }
 
+.view-inspirationen-right .promo-info,
+.view-traningen-right .promo-info,
 .view-topshelf-promotions-right .promo-info,
 .view-right-with-small-image .promo-info {
   position: absolute;
@@ -213,6 +241,8 @@
   color: #fff;
 }
 
+.view-inspirationen-right .promo-info::before,
+.view-traningen-right .promo-info::before,
 .view-topshelf-promotions-right .promo-info::before,
 .view-right-with-small-image .promo-info::before {
   content: "";
@@ -229,6 +259,8 @@
   z-index: -1;
 }
 
+.view-inspirationen-right .promo-heading--main,
+.view-traningen-right .promo-heading--main,
 .view-topshelf-promotions-right .promo-heading--main,
 .view-right-with-small-image .promo-heading--main {
   margin: 0;
@@ -237,12 +269,18 @@
   line-height: 1.25;
 }
 
+.view-inspirationen-right .promo-heading--main a,
+.view-traningen-right .promo-heading--main a,
 .view-topshelf-promotions-right .promo-heading--main a,
 .view-right-with-small-image .promo-heading--main a {
   color: #fff;
   text-decoration: none;
 }
 
+.view-inspirationen-right .promo-heading--main,
+.view-inspirationen-right .promo-heading--main a,
+.view-traningen-right .promo-heading--main a,
+.view-traningen-right .promo-heading--main,
 .view-topshelf-promotions-right .promo-heading--main,
 .view-topshelf-promotions-right .promo-heading--main a,
 .view-right-with-small-image .promo-heading--main,
