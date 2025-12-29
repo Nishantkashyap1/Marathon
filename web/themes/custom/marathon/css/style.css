@@ -752,3 +752,135 @@ background: linear-gradient(
 #views-exposed-form-nyheterna-block-1 .form-actions {
     display: none;
 }
+
+
+/* =========================================================
+  End Nyheterna Page Top Filter Styles
+============================================================ */
+
+.block-views-blockteman-om-lopningen-block-2 h2 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 10px;
+  padding-left: 16px;
+  font-size: 32px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #222;
+  position: relative;
+}
+
+/* Red vertical bar */
+.block-views-blockteman-om-lopningen-block-2 h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background-color: #d71920;
+}
+
+/* Horizontal line */
+.block-views-blockteman-om-lopningen-block-2 h2::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: #dcdcdc;
+  margin-left: 16px;
+}
+
+body.livet .view-teman-om-lopningen {
+    height: 265px;
+}
+
+body.livet.view-teman-om-lopningen .row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+body.livet .tema-card {
+    position: relative;
+    flex-direction: column;
+    width: 98%;
+    background: #ffffff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+    height: 245px;
+}
+
+body.livet .tema-card-link {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+body.livet .tema-image {
+    position: relative;
+    height: 136px;
+    overflow: hidden;
+}
+
+body.livet .tema-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+body.livet .tema-node-count {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  z-index: 3;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+body.livet .tema-content {
+    flex: 1;
+    padding: 12px 12px 11px;
+    display: flex;
+    flex-direction: column;
+}
+
+body.livet .tema-title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111111;
+}
+
+body.livet .tema-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #777777;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;  
+  overflow: hidden;
+}
+
+body.tema-kost .view-taxonomy-term .tema-image,
+body.tema-recept .view-taxonomy-term .tema-image,
+body.livet .view-taxonomy-term,
+body.tema-halsa .view-taxonomy-term .tema-image {
+    display: none;
+} 
+
+body.livet .contextual-region.view.view-taxonomy-term.view-id-taxonomy_term.view-display-id-page_1 {
+    display: none;
+}
+
+body.tema-kost .view-taxonomy-term .view-header,
+body.tema-recept .view-taxonomy-term .view-header,
+body.tema-halsa .view-taxonomy-term .view-header {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

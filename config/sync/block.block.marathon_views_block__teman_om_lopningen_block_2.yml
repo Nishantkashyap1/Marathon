@@ -1,22 +1,22 @@
-uuid: f98ebe9b-87e8-43d7-becc-ad05f4bce437
+uuid: 6041cc83-3b76-48d8-b11b-7413bbd1a7b6
 langcode: sv
 status: true
 dependencies:
   config:
-    - views.view.nyheterna
+    - views.view.teman_om_lopningen
   module:
     - system
     - views
   theme:
     - marathon
-id: marathon_views_block__nyheterna_block_1
+id: marathon_views_block__teman_om_lopningen_block_2
 theme: marathon
 region: content
-weight: -5
+weight: -9
 provider: null
-plugin: 'views_block:nyheterna-block_1'
+plugin: 'views_block:teman_om_lopningen-block_2'
 settings:
-  id: 'views_block:nyheterna-block_1'
+  id: 'views_block:teman_om_lopningen-block_2'
   label: ''
   label_display: '0'
   provider: views
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /nyheterna
+    pages: /livet
