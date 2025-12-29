@@ -1,22 +1,22 @@
-uuid: ef3616ac-48a1-49cc-9889-dc20231043d5
+uuid: 0a7b409e-53df-4d42-8257-1f25c2d70fb9
 langcode: sv
 status: true
 dependencies:
   config:
-    - views.view.right_with_small_image
+    - views.view.inspirationen_left
   module:
     - system
     - views
   theme:
     - marathon
-id: marathon_views_block__right_with_small_image_block_1_2
+id: marathon_views_block__inspirationen_left_block_1
 theme: marathon
-region: hero_right
-weight: -11
+region: hero_left
+weight: 0
 provider: null
-plugin: 'views_block:right_with_small_image-block_1'
+plugin: 'views_block:inspirationen_left-block_1'
 settings:
-  id: 'views_block:right_with_small_image-block_1'
+  id: 'views_block:inspirationen_left-block_1'
   label: ''
   label_display: '0'
   provider: views
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: '<front>'
+    pages: /inspirationen
