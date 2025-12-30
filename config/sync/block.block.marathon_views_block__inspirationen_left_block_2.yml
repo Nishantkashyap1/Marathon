@@ -1,0 +1,30 @@
+uuid: 01612fd4-d77e-49c5-b139-11127df7453f
+langcode: sv
+status: true
+dependencies:
+  config:
+    - views.view.inspirationen_left
+  module:
+    - system
+    - views
+  theme:
+    - marathon
+id: marathon_views_block__inspirationen_left_block_2
+theme: marathon
+region: hero_left
+weight: 0
+provider: null
+plugin: 'views_block:inspirationen_left-block_2'
+settings:
+  id: 'views_block:inspirationen_left-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /livet
