@@ -462,7 +462,7 @@ a.ArticleTeaser:hover .article-title {
 /* ==========================================================================
     Teman om Löpningen
     ========================================================================== */
-
+.block-views-blockteman-om-lopningen-block-2 h2,
 .block-views-blockteman-om-lopningen-block-1 h2 {
   display: flex;
   align-items: center;
@@ -477,6 +477,7 @@ a.ArticleTeaser:hover .article-title {
 }
 
 /* Red vertical bar */
+.block-views-blockteman-om-lopningen-block-2 h2::before,
 .block-views-blockteman-om-lopningen-block-1 h2::before {
   content: "";
   position: absolute;
@@ -488,6 +489,7 @@ a.ArticleTeaser:hover .article-title {
 }
 
 /* Horizontal line */
+.block-views-blockteman-om-lopningen-block-2 h2::after,
 .block-views-blockteman-om-lopningen-block-1 h2::after {
   content: "";
   flex-grow: 1;
@@ -579,6 +581,9 @@ body.lopningen .tema-description {
   overflow: hidden;
 }
 
+body.traningen .view-taxonomy-term,
+body.livet .view-taxonomy-term,
+body.inspirationen .view-taxonomy-term,
 body.tema-recept .view-taxonomy-term .tema-image,
 body.tema-halsa .view-taxonomy-term .tema-image,
 body.tema-kost .view-taxonomy-term .tema-image,
@@ -588,7 +593,7 @@ body.tema-traning .view-taxonomy-term .tema-image,
 body.lopningen .view-taxonomy-term,
 body.tema-skador .view-taxonomy-term .tema-image {
     display: none;
-} 
+}
 
 body.tema-recept .view-taxonomy-term .view-header,
 body.tema-halsa .view-taxonomy-term .view-header,
@@ -609,6 +614,7 @@ h3.tema-title {
 .view-header .theme-info{
   color: #999;
 }
+
 =================================
 /* Container for the whole list */
 .view-intressanta-lopp {
