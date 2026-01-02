@@ -12,7 +12,7 @@ dependencies:
 id: marathon_views_block__teman_om_lopningen_block_2
 theme: marathon
 region: content
-weight: -9
+weight: -12
 provider: null
 plugin: 'views_block:teman_om_lopningen-block_2'
 settings:

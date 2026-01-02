@@ -11,7 +11,7 @@ dependencies:
 id: marathon_footermenu
 theme: marathon
 region: sidebar_first
-weight: -6
+weight: -14
 provider: null
 plugin: 'system_menu_block:menu-footer-menu'
 settings:

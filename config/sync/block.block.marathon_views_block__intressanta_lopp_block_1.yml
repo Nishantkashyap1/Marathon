@@ -11,7 +11,7 @@ dependencies:
 id: marathon_views_block__intressanta_lopp_block_1
 theme: marathon
 region: sidebar_second
-weight: 0
+weight: -12
 provider: null
 plugin: 'views_block:intressanta_lopp-block_1'
 settings:

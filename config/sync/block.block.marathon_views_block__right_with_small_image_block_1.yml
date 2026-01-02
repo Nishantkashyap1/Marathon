@@ -12,7 +12,7 @@ dependencies:
 id: marathon_views_block__right_with_small_image_block_1
 theme: marathon
 region: sidebar_first
-weight: -3
+weight: -11
 provider: null
 plugin: 'views_block:right_with_small_image-block_1'
 settings:
