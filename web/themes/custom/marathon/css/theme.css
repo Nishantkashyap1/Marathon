@@ -29,11 +29,11 @@ body {
     position: relative;
 }
 main.container-fluid {
-    width: 1275px;
+    width: 1280px;
 }
 
 .SiteTemplate-inner{
-    max-width: 1275px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     padding: 0 9px;
@@ -65,8 +65,10 @@ body.has-sidebar-second .main-content {
   width: 100%;
 }
 
-.sidebar-second{
-  width: 30% !important;
+.sidebar-second {
+    /* width: 30% !important; */
+    width: calc(100% - 860px) !important;
+    padding-left: 11px !important;
 }
 
 
@@ -102,12 +104,11 @@ body.tema-skador .row > * {
   padding-right: 0px !important;
 }
 
-/* @media (min-width: 992px) { */
-  .main-layout.has-sidebar-second .main-content {
-    max-width: 860px;
+.main-layout.has-sidebar-second .main-content {
+    max-width: 855px;
     width: 100%;
-    margin-right: 10px;
-  }
+    margin-right: 5px;
+}
 /* } */
 
 

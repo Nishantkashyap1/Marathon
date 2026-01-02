@@ -1,4 +1,8 @@
 <?php
+
+use Drupal\Core\Block\BlockPluginInterface;
+use Drupal\taxonomy\Entity\Term;
+
 /**
  * @file:
  *   Contains the module file for the inline_entity_form_preview module.
@@ -28,4 +32,38 @@ function inline_entity_form_preview_help($route_name, \Drupal\Core\Routing\Route
  */
 function inline_entity_form_preview_page_attachments(array &$attachments) {
   $attachments['#attached']['library'][] = 'inline_entity_form_preview/body_class_from_url';
+}
+
+
+
+/**
+ * Implements hook_block_view_alter().
+ */
+function inline_entity_form_preview_block_view_alter(array &$build, BlockPluginInterface $block) {
+
+  // Target ONLY your Views block.
+  if ($block->getPluginId() !== 'views_block:latest_article_sidebar-block_1') {
+    return;
+  }
+
+  // Get taxonomy term from route.
+  $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
+
+  if ($term instanceof Term) {
+
+    $title = t('Senaste @term', [
+      '@term' => $term->label(),
+    ]);
+
+    // ✅ Correct way for Views blocks
+    $build['#configuration']['label'] = $title;
+    $build['#configuration']['label_display'] = TRUE;
+
+    // Cache correctness.
+    $build['#cache']['contexts'][] = 'route';
+    $build['#cache']['tags'] = array_merge(
+      $build['#cache']['tags'] ?? [],
+      $term->getCacheTags()
+    );
+  }
 }

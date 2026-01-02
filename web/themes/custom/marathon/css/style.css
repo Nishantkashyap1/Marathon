@@ -302,6 +302,8 @@
     padding-right: 10px;
     padding-bottom: 15px;
 }
+
+.view-latest-article-sidebar .article-row,
 .view-taxonomy-term .article-row,
 .view-nyheterna .article-row,
 .view-article-list-on-home-page .article-row {
@@ -778,3 +780,60 @@ background: linear-gradient(
   End Nyheterna Page Top Filter Styles
 ============================================================ */
 
+
+/* =========================================================
+  Start Latest Article Sidebar
+============================================================ */
+
+.block-views-blocklatest-article-sidebar-block-1 {
+    background: #fff;
+    width: 416px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.ArticleTeaser .article-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 6px;
+}
+
+/* Date */
+.ArticleTeaser .article-date {
+  font-size: 14px;
+  color: #8a8a8a;
+  margin: 0;
+}
+
+.ArticleTeaser .article-title a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.node-id {
+  display: none;
+}
+
+.view-latest-article-sidebar .article-row {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.view-latest-article-sidebar .article-row .img-fluid {
+    width: 80px !important;
+    height: 76px !important;
+    max-width: 100px;
+}
+.block-views-blocklatest-article-sidebar-block-1 h2 {
+    font-size: 18px;
+    padding-left: 7px;
+    padding-top: 10px;
+    color: #222;
+}
+
+/* =========================================================
+  End Latest Article Sidebar
+============================================================ */
