@@ -1,0 +1,30 @@
+uuid: e437ef43-868a-4548-bfb3-131d18676ed7
+langcode: sv
+status: true
+dependencies:
+  config:
+    - views.view.teman_om_lopningen
+  module:
+    - system
+    - views
+  theme:
+    - marathon
+id: marathon_views_block__teman_om_lopningen_block_3
+theme: marathon
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:teman_om_lopningen-block_3'
+settings:
+  id: 'views_block:teman_om_lopningen-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+  exposed: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /traningen

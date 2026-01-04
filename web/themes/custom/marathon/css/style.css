@@ -510,6 +510,8 @@ body.lopningen.view-teman-om-lopningen .row {
   --bs-gutter-y: 0;
 }
 
+body.inspirationen .tema-card,
+body.traningen .tema-card,
 body.livet .tema-card,
 body.lopningen .tema-card {
     position: relative;
@@ -520,9 +522,10 @@ body.lopningen .tema-card {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease;
-    height: 245px;
+    /* height: 245px; */
 }
-
+body.inspirationen .tema-card-link,
+body.traningen .tema-card-link,
 body.livet .tema-card-link,
 body.lopningen .tema-card-link {
   position: absolute;
@@ -530,6 +533,8 @@ body.lopningen .tema-card-link {
   z-index: 5;
 }
 
+body.inspirationen .tema-image,
+body.traningen .tema-image,
 body.livet .tema-image,
 body.lopningen .tema-image {
     position: relative;
@@ -537,6 +542,8 @@ body.lopningen .tema-image {
     overflow: hidden;
 }
 
+body.inspirationen .tema-image img,
+body.traningen .tema-image img,
 body.livet .tema-image img,
 body.lopningen .tema-image img {
   width: 100%;
@@ -545,6 +552,8 @@ body.lopningen .tema-image img {
   display: block;
 }
 
+body.inspirationen .tema-node-count,
+body.traningen .tema-node-count,
 body.livet .tema-node-count,
 body.lopningen .tema-node-count {
   position: absolute;
@@ -557,6 +566,8 @@ body.lopningen .tema-node-count {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
+body.inspirationen .tema-content,
+body.traningen .tema-content,
 body.livet .tema-content,
 body.lopningen .tema-content {
     flex: 1;
@@ -565,12 +576,18 @@ body.lopningen .tema-content {
     flex-direction: column;
 }
 
+body.inspirationen .tema-title,
+body.traningen .tema-title,
 body.livet .tema-title,
 body.lopningen .tema-title {
   margin: 0 0 8px;
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 700;
   color: #111111;
+}
+
+.view-teman-om-lopningen .view-content .views-col {
+    height: 350px;
 }
 
 body.lopningen .tema-description {
@@ -837,3 +854,5 @@ background: linear-gradient(
 /* =========================================================
   End Latest Article Sidebar
 ============================================================ */
+
+
