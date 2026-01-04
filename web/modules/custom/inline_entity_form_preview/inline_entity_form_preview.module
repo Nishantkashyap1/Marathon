@@ -2,6 +2,8 @@
 
 use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * @file:
@@ -48,22 +50,60 @@ function inline_entity_form_preview_block_view_alter(array &$build, BlockPluginI
 
   // Get taxonomy term from route.
   $term = \Drupal::routeMatch()->getParameter('taxonomy_term');
-
-  if ($term instanceof Term) {
-
-    $title = t('Senaste @term', [
-      '@term' => $term->label(),
-    ]);
-
-    // ✅ Correct way for Views blocks
-    $build['#configuration']['label'] = $title;
-    $build['#configuration']['label_display'] = TRUE;
-
-    // Cache correctness.
-    $build['#cache']['contexts'][] = 'route';
-    $build['#cache']['tags'] = array_merge(
-      $build['#cache']['tags'] ?? [],
-      $term->getCacheTags()
-    );
+  if (!$term instanceof Term) {
+    return;
   }
+
+  /* ================= TITLE (UNCHANGED) ================= */
+
+  $build['#configuration']['label'] = t('Senaste @term', [
+    '@term' => $term->label(),
+  ]);
+  $build['#configuration']['label_display'] = TRUE;
+
+  /* ================= READ MORE BUTTON ================= 
+
+  $avdelning_map = [
+    'Löpningen' => 539,
+    'Träningen' => 540,
+  ];
+
+  $term_label = $term->label();
+
+  if (!isset($avdelning_map[$term_label])) {
+    return;
+  }
+
+  $url = Url::fromUri('internal:/nyheterna', [
+    'query' => [
+      'avdelning' => $avdelning_map[$term_label],
+    ],
+  ]);
+
+  $link = Link::fromTextAndUrl(t('Read more'), $url)->toRenderable();
+  $link['#attributes'] = [
+    'class' => ['btn', 'btn-primary', 'mt-3'],
+  ];
+
+  
+
+  if (isset($build['content']['view_build'])) {
+    $build['content']['view_build']['#suffix'] =
+      ($build['content']['view_build']['#suffix'] ?? '') . render($link);
+  }
+  elseif (isset($build['content'])) {
+    // Fallback
+    $build['content']['#suffix'] =
+      ($build['content']['#suffix'] ?? '') . render($link);
+  }
+\Drupal::logger('debug')->notice($block->getPluginId());
+
+ */
+  $build['#cache']['contexts'][] = 'route';
+  $build['#cache']['tags'] = array_merge(
+    $build['#cache']['tags'] ?? [],
+    $term->getCacheTags()
+  );
 }
+
+  
