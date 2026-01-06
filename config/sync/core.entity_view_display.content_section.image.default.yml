@@ -7,7 +7,6 @@ dependencies:
     - field.field.content_section.image.field_content_section_byline
     - field.field.content_section.image.field_content_section_desc
     - field.field.content_section.image.field_content_section_image
-    - image.style.article_list_on_home_page_225x124
   module:
     - image
 id: content_section.image.default
@@ -28,7 +27,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: article_list_on_home_page_225x124
+      image_style: ''
       image_loading:
         attribute: lazy
     third_party_settings: {  }

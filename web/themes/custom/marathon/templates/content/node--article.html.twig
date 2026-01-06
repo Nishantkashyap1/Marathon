@@ -25,9 +25,12 @@
 
 
 {% if custom_article_image %}
-  <div class="article-media">
+  {# <div class="article-media">
     {{ custom_article_image }}
-  </div>
+  </div> #}
+{% else %}
+  {# This shows the default if the custom image isn't generated #}
+  {{ content.field_media }}
 {% endif %}
 
   {# Ingress #}

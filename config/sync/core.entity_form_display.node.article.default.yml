@@ -63,9 +63,28 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_media:
+    type: inline_entity_form_preview
+    weight: 10
+    region: content
+    settings:
+      form_mode: default
+      view_mode: default!
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      revision: false
+      collapsible: false
+      collapsed: false
+      removed_reference: optional
+      allow_duplicate: false
+    third_party_settings: {  }
   field_metatag:
     type: metatag_firehose
-    weight: 10
+    weight: 11
     region: content
     settings:
       sidebar: true
@@ -122,7 +141,6 @@ hidden:
   body: true
   created: true
   field_image: true
-  field_media: true
   field_section: true
   field_tags: true
   field_target_group: true
