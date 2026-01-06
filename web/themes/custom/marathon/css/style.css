@@ -599,6 +599,16 @@ body.lopningen .tema-description {
   -webkit-line-clamp: 2;  
   overflow: hidden;
 }
+
+body.tema-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .tema-image,
+body.tema-maratoncoachen-sanna-hed .view-taxonomy-term .tema-image,
+body.tema-personportratt .view-taxonomy-term .tema-image,
+body.tema-veckans-lopare .view-taxonomy-term .tema-image,
+body.tema-mot-ramboll-stockholm-halvmarathon-med-maratonlabbet .view-taxonomy-term .tema-image,
+body.traningen .view-taxonomy-term .tema-image,
+body.tema-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .tema-image,
+body.tema-vaga-varruset .view-taxonomy-term .tema-image,
+body.tema-vagen-mot-maran-2022 .view-taxonomy-term .tema-image,
 body.tema-alternativ-traning .view-taxonomy-term .tema-image,
 body.tema-styrketraning .view-taxonomy-term .tema-image,
 body.tema-mental-traning .view-taxonomy-term .tema-image,
@@ -615,6 +625,15 @@ body.lopningen .view-taxonomy-term,
 body.tema-skador .view-taxonomy-term .tema-image {
     display: none;
 }
+body.tema-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .view-header,
+body.tema-maratoncoachen-sanna-hed .view-taxonomy-term .view-header,
+body.tema-personportratt .view-taxonomy-term .view-header,
+body.tema-veckans-lopare .view-taxonomy-term .view-header,
+body.tema-mot-ramboll-stockholm-halvmarathon-med-maratonlabbet .view-taxonomy-term .view-header,
+body.traningen .view-taxonomy-term .view-header,
+body.tema-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .view-header,
+body.tema-vaga-varruset .view-taxonomy-term .view-header,
+body.tema-vagen-mot-maran-2022 .view-taxonomy-term .view-header,
 body.tema-alternativ-traning .view-taxonomy-term .view-header,
 body.tema-styrketraning .view-taxonomy-term .view-header,
 body.tema-mental-traning .view-taxonomy-term .view-header,
