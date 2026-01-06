@@ -18,7 +18,7 @@ plugin: 'views_block:latest_article_sidebar-block_1'
 settings:
   id: 'views_block:latest_article_sidebar-block_1'
   label: ''
-  label_display: '0'
+  label_display: visible
   provider: views
   views_label: ''
   items_per_page: none
@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/tema/tavling\r\n/nyheter"
+    pages: "/lopningen\r\n/traningen\r\n/inspirationen\r\n/livet"
