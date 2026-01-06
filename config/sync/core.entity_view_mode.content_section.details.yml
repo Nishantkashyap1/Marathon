@@ -1,0 +1,11 @@
+uuid: 2014f127-74fc-4dcb-8017-3609fd9cd6f7
+langcode: sv
+status: true
+dependencies:
+  module:
+    - eck
+id: content_section.details
+label: Details
+description: ''
+targetEntityType: content_section
+cache: true

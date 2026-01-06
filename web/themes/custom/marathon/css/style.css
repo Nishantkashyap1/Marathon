@@ -599,7 +599,9 @@ body.lopningen .tema-description {
   -webkit-line-clamp: 2;  
   overflow: hidden;
 }
-
+body.tema-alternativ-traning .view-taxonomy-term .tema-image,
+body.tema-styrketraning .view-taxonomy-term .tema-image,
+body.tema-mental-traning .view-taxonomy-term .tema-image,
 body.traningen .view-taxonomy-term,
 body.livet .view-taxonomy-term,
 body.inspirationen .view-taxonomy-term,
@@ -613,7 +615,9 @@ body.lopningen .view-taxonomy-term,
 body.tema-skador .view-taxonomy-term .tema-image {
     display: none;
 }
-
+body.tema-alternativ-traning .view-taxonomy-term .view-header,
+body.tema-styrketraning .view-taxonomy-term .view-header,
+body.tema-mental-traning .view-taxonomy-term .view-header,
 body.tema-recept .view-taxonomy-term .view-header,
 body.tema-halsa .view-taxonomy-term .view-header,
 body.tema-kost .view-taxonomy-term .view-header,
@@ -855,4 +859,76 @@ background: linear-gradient(
   End Latest Article Sidebar
 ============================================================ */
 
+
+/* =========================================================
+   Article Details Page Styles
+   ========================================================= */
+
+.full-node-details{
+    background-color: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.full-node-details .main-details{
+    margin: 1.5em auto;
+    max-width: 730px;
+    padding: 0 15px;
+}
+
+/* .node-meta {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    color: #999;
+    font-size: 14px;
+} */
+
+body.path-frontpage .addtoany_list {
+display: none;
+}
+
+.node-meta {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    color: #999;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.author-info {
+    line-height: 1.6; 
+}
+
+.social-sharing {
+    display: flex;
+    align-items: center;
+}
+
+.article-title .field--name-title{
+  font-size: 39px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.article-media {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.article-media img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
 

@@ -27,4 +27,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/lopningen\r\n/traningen\r\n/inspirationen\r\n/livet"
+    pages: "/tema/tavling\r\n/nyheter"

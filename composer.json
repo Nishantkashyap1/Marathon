@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.6",
         "drupal/backup_migrate": "^5.1",
         "drupal/better_exposed_filters": "^7.1",
@@ -49,6 +50,7 @@
         "drupal/smtp": "^1.4",
         "drupal/superfish": "^1.13",
         "drupal/token": "^1.16",
+        "drupal/twig_tweak": "^3.4",
         "drupal/video": "^3.1",
         "drupal/video_embed_field": "^2.5",
         "drupal/views_rss": "^2.4",
