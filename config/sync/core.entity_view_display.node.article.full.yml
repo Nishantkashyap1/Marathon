@@ -1,9 +1,10 @@
-uuid: 79742e65-a025-4a0e-9d28-02cad475c43b
+uuid: 0186a4ee-2695-41fc-9778-63cfaa04edda
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_display.comment.comment.default
+    - core.entity_view_mode.node.full
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_content_sections
@@ -27,15 +28,15 @@ dependencies:
     - user
 _core:
   default_config_hash: 7fb0j9HnIXfP9ndewzgPPzzeX_SV532wuYpkscrCMCk
-id: node.article.default
+id: node.article.full
 targetEntityType: node
 bundle: article
-mode: default
+mode: full
 content:
   addtoany:
     settings: {  }
     third_party_settings: {  }
-    weight: 5
+    weight: 16
     region: content
   body:
     type: text_default

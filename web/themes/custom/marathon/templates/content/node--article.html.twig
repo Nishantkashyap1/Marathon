@@ -1,0 +1,49 @@
+{#
+/**
+ * Custom template for Article content type
+ */
+#}
+<div class="full-node-details">
+<div class="main-details">
+<article{{ attributes }}>
+
+  {# Title #}
+  <h1 class="article-title">
+    {{ label }}
+  </h1>
+
+<div class="node-meta">
+  <div class="author-info">
+    {{ 'Publicerad av'|t }} {{ author_name }} <br>
+    {{ published_date }} • {{ 'Uppdaterad'|t }} {{ updated_date }}
+  </div>
+
+  <div class="social-sharing">
+    {{ content.addtoany }}
+  </div>
+</div>
+
+
+{% if custom_article_image %}
+  <div class="article-media">
+    {{ custom_article_image }}
+  </div>
+{% endif %}
+
+  {# Ingress #}
+  {% if content.field_lead %}
+    <div class="article-ingress">
+      {{ content.field_lead }}
+    </div>
+  {% endif %}
+
+  {# CONTENT SECTIONS (Inline Entity Form output) #}
+  {% if content.field_content_sections %}
+    <div class="article-content-sections">
+      {{ content.field_content_sections }}
+    </div>
+  {% endif %}
+
+</article>
+</div>
+</div>
