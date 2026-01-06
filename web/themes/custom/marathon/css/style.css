@@ -293,6 +293,7 @@
    View: view-article-list-on-home-page
    Description: Styles for article listing on the home page
    ========================================================================== */
+.view-remaining-articles .view-content,
 .view-taxonomy-term .view-content,
 .view-nyheterna .view-content,
 .view-article-list-on-home-page .view-content,
@@ -303,6 +304,7 @@
     padding-bottom: 15px;
 }
 
+.view-remaining-articles .article-row,
 .view-latest-article-sidebar .article-row,
 .view-taxonomy-term .article-row,
 .view-nyheterna .article-row,
@@ -313,6 +315,11 @@
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 20px;
     padding-top: 20px;
+}
+
+.view-remaining-articles .ArticleTeaser--hasImage .field--type-image .img-fluid{
+    width: 218px !important;
+    max-width: none !important;
 }
 
 .article-teaser p {
@@ -378,7 +385,7 @@ a.ArticleTeaser:hover .article-title {
 }
 
 
-
+.view-remaining-articles .article-field-title,
 .view-nyheterna .article-field-title,
 .view-article-list-on-home-page .article-date time {
     margin-bottom: 4px;
@@ -841,11 +848,14 @@ background: linear-gradient(
 }
 
 /* Date */
+.article-category a,
 .ArticleTeaser .article-date {
   font-size: 14px;
   color: #8a8a8a;
   margin: 0;
 }
+
+
 
 .ArticleTeaser .article-title a {
   color: #1a1a1a;
@@ -952,3 +962,35 @@ display: none;
   border-radius: 6px;
 }
 
+/************************************************
+   End Article Details Page Styles
+   ************************************************/
+
+   /************************************************
+   Start Related Article Styles
+   ************************************************/
+
+
+   /* Container for both date and category */
+.date-with-category {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+  font-size: 14px;
+}
+
+.article-date {
+  color: #666;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.article-category {
+  margin: 0;
+  display: flex;
+}
+
+.article-category a {
+  text-decoration: none;
+}

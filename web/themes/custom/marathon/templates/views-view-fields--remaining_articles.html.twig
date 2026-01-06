@@ -1,0 +1,23 @@
+{# -------------------------------
+  Extract node ID
+-------------------------------- #}
+{% set nid = fields.nid.content|default(row._entity.id)|striptags|trim %}
+{% set url = nid ? '/node/' ~ nid : '#' %}
+
+{# -------------------------------
+  Output markup
+-------------------------------- #}
+<div class="ArticleTeaser ArticleTeaser--hasImage {{ filter_class }}">
+  {% if fields is defined %}
+    <div class="debug-modified-fields">
+      {% for key, field in fields %}
+        {% if field.content is defined %}
+          <div class="field-value">{{ field.content|render|raw }}</div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {# Stretched link overlay #}
+  <a href="{{ url }}" class="stretched-link"></a>
+</div>

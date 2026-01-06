@@ -9,7 +9,7 @@ dependencies:
 id: marathon_breadcrumbs
 theme: marathon
 region: content
-weight: -7
+weight: -4
 provider: null
 plugin: system_breadcrumb_block
 settings:

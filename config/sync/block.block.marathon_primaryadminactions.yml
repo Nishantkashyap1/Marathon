@@ -7,7 +7,7 @@ dependencies:
 id: marathon_primaryadminactions
 theme: marathon
 region: content
-weight: -14
+weight: -15
 provider: null
 plugin: local_actions_block
 settings:
