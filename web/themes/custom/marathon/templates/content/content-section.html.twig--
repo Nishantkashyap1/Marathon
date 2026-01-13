@@ -1,0 +1,13 @@
+<article{{ attributes.addClass('content-section') }}>
+
+  {% if content.field_title %}
+    <h2 class="content-section__title">
+      {{ content.field_title }}
+    </h2>
+  {% endif %}
+
+  <div class="content-section__body">
+    {{ content }}
+  </div>
+
+</article>

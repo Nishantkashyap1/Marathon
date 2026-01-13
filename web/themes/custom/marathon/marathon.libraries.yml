@@ -1,7 +1,26 @@
+# global-styling:
+#   version: 1.x
+#   js:
+#     js/global.js: {}
+#   css:
+#     component:
+#       css/style.css: {}
+#       css/theme.css: {}
+#       css/menu.css: {}
+#       css/mobile.css: {}
+#       css/slideshow.css: {}
+
+#   dependencies:
+#     - core/jquery
+#     - core/drupal
+
+
 global-styling:
   version: 1.x
+
   js:
     js/global.js: {}
+
   css:
     component:
       css/style.css: {}
@@ -10,6 +29,15 @@ global-styling:
       css/mobile.css: {}
       css/slideshow.css: {}
 
+  remote:
+    https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap: {}
+
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+    gpl-compatible: true
+
   dependencies:
     - core/jquery
     - core/drupal
+

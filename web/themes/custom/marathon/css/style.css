@@ -5,6 +5,65 @@
  */
  /* General Reset */
 
+ /* ===============================
+   Metroflex Narrow – Light (300)
+================================ */
+@font-face {
+  font-family: 'Metroflex Narrow';
+  src: url('../fonts/metroflex_narrow/MeNLt___Web.eot');
+  src: url('../fonts/metroflex_narrow/MeNLt___Web.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/metroflex_narrow/MeNLt___Web.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============================
+   Metroflex Narrow – Regular (400)
+================================ */
+@font-face {
+  font-family: 'Metroflex Narrow';
+  src: url('../fonts/metroflex_narrow/MeNRg___Web.eot');
+  src: url('../fonts/metroflex_narrow/MeNRg___Web.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/metroflex_narrow/MeNRg___Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===============================
+   Metroflex Narrow – Bold (700)
+================================ */
+@font-face {
+  font-family: 'Metroflex Narrow';
+  src: url('../fonts/metroflex_narrow/MeNBd___Web.eot');
+  src: url('../fonts/metroflex_narrow/MeNBd___Web.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/metroflex_narrow/MeNBd___Web.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #333 !important;
+    background-color: #eeeeee !important; 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1.Promo-heading a {
+    font-weight: 700 !important;
+    font-family: 'Metroflex Narrow';
+    font-size: 47px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "metroflexnarrow","Arial",sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +73,11 @@
   a {
     text-decoration: none;
     color: inherit;
+    
+  }
+
+  .full-node-details a{
+    color: #4083a9;
   }
  
   .logo {
@@ -74,8 +138,9 @@
 
 .hero-news-section{
   margin-bottom: 15px;
-
 }
+
+
 
 
 
@@ -607,50 +672,53 @@ body.lopningen .tema-description {
   overflow: hidden;
 }
 
-body.tema-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .tema-image,
-body.tema-maratoncoachen-sanna-hed .view-taxonomy-term .tema-image,
-body.tema-personportratt .view-taxonomy-term .tema-image,
-body.tema-veckans-lopare .view-taxonomy-term .tema-image,
+body.path-frontpage .full-node-details,
+body.allt-om-ramboll-stockholm-halvmarathon-2023 .view-taxonomy-term .tema-image,
+body.inspirationen-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .tema-image,
+body.inspirationen-maratoncoachen-sanna-hed .view-taxonomy-term .tema-image,
+body.inspirationen-personportratt .view-taxonomy-term .tema-image,
+body.inspirationen-veckans-lopare .view-taxonomy-term .tema-image,
 body.tema-mot-ramboll-stockholm-halvmarathon-med-maratonlabbet .view-taxonomy-term .tema-image,
 body.traningen .view-taxonomy-term .tema-image,
-body.tema-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .tema-image,
-body.tema-vaga-varruset .view-taxonomy-term .tema-image,
-body.tema-vagen-mot-maran-2022 .view-taxonomy-term .tema-image,
-body.tema-alternativ-traning .view-taxonomy-term .tema-image,
-body.tema-styrketraning .view-taxonomy-term .tema-image,
-body.tema-mental-traning .view-taxonomy-term .tema-image,
+body.traningen-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .tema-image,
+body.traningen-vaga-varruset .view-taxonomy-term .tema-image,
+body.traningen-vagen-mot-maran-2022 .view-taxonomy-term .tema-image,
+body.traningen-alternativ-traning .view-taxonomy-term .tema-image,
+body.traningen-styrketraning .view-taxonomy-term .tema-image,
+body.traningen-mental-traning .view-taxonomy-term .tema-image,
 body.traningen .view-taxonomy-term,
 body.livet .view-taxonomy-term,
 body.inspirationen .view-taxonomy-term,
-body.tema-recept .view-taxonomy-term .tema-image,
-body.tema-halsa .view-taxonomy-term .tema-image,
-body.tema-kost .view-taxonomy-term .tema-image,
+body.livet-recept .view-taxonomy-term .tema-image,
+body.livet-halsa .view-taxonomy-term .tema-image,
+body.livet-kost .view-taxonomy-term .tema-image,
 body.lopningen .view-taxonomy-term .tema-image,
-body.tema-tavling .view-taxonomy-term .tema-image,
-body.tema-traning .view-taxonomy-term .tema-image,
+body.lopningen-tavling .view-taxonomy-term .tema-image,
+body.lopningen-traning .view-taxonomy-term .tema-image,
 body.lopningen .view-taxonomy-term,
-body.tema-skador .view-taxonomy-term .tema-image {
+body.lopningen-skador .view-taxonomy-term .tema-image {
     display: none;
 }
 /*Testing Push*/
-body.tema-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .view-header,
-body.tema-maratoncoachen-sanna-hed .view-taxonomy-term .view-header,
-body.tema-personportratt .view-taxonomy-term .view-header,
-body.tema-veckans-lopare .view-taxonomy-term .view-header,
+body.allt-om-ramboll-stockholm-halvmarathon-2023 .view-taxonomy-term .view-header,
+body.inspirationen-spring-snyggt-med-jesus-och-manne .view-taxonomy-term .view-header,
+body.inspirationen-maratoncoachen-sanna-hed .view-taxonomy-term .view-header,
+body.inspirationen-personportratt .view-taxonomy-term .view-header,
+body.inspirationen-veckans-lopare .view-taxonomy-term .view-header,
 body.tema-mot-ramboll-stockholm-halvmarathon-med-maratonlabbet .view-taxonomy-term .view-header,
 body.traningen .view-taxonomy-term .view-header,
-body.tema-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .view-header,
-body.tema-vaga-varruset .view-taxonomy-term .view-header,
-body.tema-vagen-mot-maran-2022 .view-taxonomy-term .view-header,
-body.tema-alternativ-traning .view-taxonomy-term .view-header,
-body.tema-styrketraning .view-taxonomy-term .view-header,
-body.tema-mental-traning .view-taxonomy-term .view-header,
-body.tema-recept .view-taxonomy-term .view-header,
-body.tema-halsa .view-taxonomy-term .view-header,
-body.tema-kost .view-taxonomy-term .view-header,
-body.tema-tavling .view-taxonomy-term .view-header,
-body.tema-traning .view-taxonomy-term .view-header,
-body.tema-skador .view-taxonomy-term .view-header {
+body.traningen-ambassadorer-ramboll-stockholm-halvmarathon-2022 .view-taxonomy-term .view-header,
+body.traningen-vaga-varruset .view-taxonomy-term .view-header,
+body.traningen-vagen-mot-maran-2022 .view-taxonomy-term .view-header,
+body.traningen-alternativ-traning .view-taxonomy-term .view-header,
+body.traningen-styrketraning .view-taxonomy-term .view-header,
+body.traningen-mental-traning .view-taxonomy-term .view-header,
+body.livet-recept .view-taxonomy-term .view-header,
+body.livet-halsa .view-taxonomy-term .view-header,
+body.livet-kost .view-taxonomy-term .view-header,
+body.lopningen-tavling .view-taxonomy-term .view-header,
+body.lopningen-traning .view-taxonomy-term .view-header,
+body.lopningen-skador .view-taxonomy-term .view-header {
     text-align: center;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -841,7 +909,7 @@ background: linear-gradient(
 
 /* Title */
 .ArticleTeaser .article-title {
-  font-size: 16px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.4;
   margin: 0 0 6px;
@@ -856,10 +924,14 @@ background: linear-gradient(
 }
 
 
-
 .ArticleTeaser .article-title a {
   color: #1a1a1a;
   text-decoration: none;
+   font-family: 'Metroflex Narrow';
+}
+
+.ArticleTeaser.revised .article-title a {
+  color: #999;
 }
 
 .node-id {
@@ -939,10 +1011,11 @@ display: none;
 }
 
 .article-title .field--name-title{
-  font-size: 39px;
+  font-size: 43px;
   color: #333;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  font-family: 'Metroflex Narrow';
 }
 
 .article-meta {
@@ -992,5 +1065,112 @@ display: none;
 }
 
 .article-category a {
+  text-decoration: none;
+}
+
+
+/********Header Training Program Link Styles********/
+
+.TrainingProgram {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.TrainingProgram .ToTrainingProgram {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.TrainingProgram .ToTrainingProgram-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.TrainingProgram .Icon-svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+.TrainingProgram .ToTrainingProgram-text {
+  white-space: nowrap;
+}
+
+/* Icon via CSS */
+.TrainingProgram .ToTrainingProgram-icon {
+    display: inline-block;
+    margin-right: -5px;
+    background-image: url('../images/icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-top: 4px;
+}
+
+.siteTemplate-footer h1.footer-logo a img {
+    width: 190px;
+    height: 20px;
+}
+
+
+/*******************Footer Bottom Bar Styles*******************/
+
+.region-footer-bottom {
+    width: 300px;
+}
+
+.region-footer-bottom .nav {
+  display: grid;
+}
+
+.region-footer-bottom .nav-item {
+  list-style: none;
+}
+
+.region-footer-bottom .nav-item:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.region-footer-bottom .nav-item:nth-child(2) {
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+
+.region-footer-bottom .nav-item:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+
+.region-footer-bottom .nav-link {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.region-footer-bottom .nav-link:hover {
+  text-decoration: underline;
+}
+
+.region-footer-bottom .navbar-nav {
+  flex-direction: unset;
+}
+
+.region-footer-bottom .navbar-nav .nav-link{
+  padding-left: 0;
   text-decoration: none;
 }

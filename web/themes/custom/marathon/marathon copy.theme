@@ -1,0 +1,39 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\taxonomy\Entity\Term;
+use \Drupal\image\Entity\ImageStyle;
+
+
+/**
+ * Implements template_preprocess_node().
+ */
+function marathon_preprocess_node(&$variables) {
+$node = $variables['node'];
+
+  $variables['author_name'] = $node->getOwner()->getDisplayName();
+  $variables['published_date'] = \Drupal::service('date.formatter')->format($node->getCreatedTime(), 'custom', 'd M Y');
+  $variables['updated_date'] = \Drupal::service('date.formatter')->format($node->getChangedTime(), 'custom', 'd M Y');
+
+  // Check if it's an article and has the media field
+  if ($node->bundle() == 'article' && $node->hasField('field_media') && !$node->get('field_media')->isEmpty()) {
+    $eck_entity = $node->get('field_media')->entity;
+
+    if ($eck_entity) {
+      $img_field = 'field_content_section_image'; 
+
+      if ($eck_entity->hasField($img_field) && !$eck_entity->get($img_field)->isEmpty()) {
+        $file = $eck_entity->get($img_field)->entity;
+
+        if ($file) {
+          $variables['custom_article_image'] = [
+            '#theme' => 'image_style',
+            '#style_name' => 'wide',
+            '#uri' => $file->getFileUri(),
+            '#alt' => $eck_entity->get($img_field)->alt ?? $node->getTitle(),
+          ];
+        }
+      }
+    }
+  }
+}
