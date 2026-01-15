@@ -5,7 +5,6 @@ dependencies:
   config:
     - views.view.latest_article_sidebar
   module:
-    - system
     - views
   theme:
     - marathon
@@ -23,8 +22,4 @@ settings:
   views_label: ''
   items_per_page: none
   exposed: {  }
-visibility:
-  request_path:
-    id: request_path
-    negate: false
-    pages: "/lopningen\r\n/traningen\r\n/inspirationen\r\n/livet"
+visibility: {  }

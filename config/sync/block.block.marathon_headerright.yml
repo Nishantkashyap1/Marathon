@@ -1,0 +1,25 @@
+uuid: a8696875-6e26-4c5e-a746-718019709e8b
+langcode: sv
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ba9a1491-8ccb-4a53-a9c7-ddaa3220a2a6'
+  module:
+    - block_content
+  theme:
+    - marathon
+id: marathon_headerright
+theme: marathon
+region: header_right
+weight: 0
+provider: null
+plugin: 'block_content:ba9a1491-8ccb-4a53-a9c7-ddaa3220a2a6'
+settings:
+  id: 'block_content:ba9a1491-8ccb-4a53-a9c7-ddaa3220a2a6'
+  label: 'Header Right'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
