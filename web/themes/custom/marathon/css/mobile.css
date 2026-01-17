@@ -1,8 +1,24 @@
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
+
+
+} */
+
+
+@media only screen and (min-width:0px) and (max-width:400px) {
+
+
+}
+@media only screen and (min-width:401px) and (max-width:767px) {
+
+
+
+}
+
+@media only screen and (min-width:0px) and (max-width:767px) {
+
 .hero-left.col-lg-8, 
 .hero-news-section 
 .view-left-with-big-image {
-    /* width: 860px; */
     width: 100%;
 }
 
@@ -10,13 +26,48 @@
     padding: 8px 10px;
 }
 
-.view-left-with-big-image .Promo-heading--main {
-    font-size: 15px;
-}
 .view-left-with-big-image .Promo-lead {
-    font-size: 14px;
-    line-height: 19px;
-    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+.view-article-list-on-home-page h3.article-title.article-field-title,
+.view-nyheterna .article-field-title a,
+.view-taxonomy-term .article-field-title .field--name-title,
+h1.Promo-heading a,
+.view-inspirationen-right .promo-heading--main a, 
+.view-traningen-right .promo-heading--main a, 
+.view-topshelf-promotions-right .promo-heading--main a, 
+.view-right-with-small-image .promo-heading--main a {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.view-remaining-articles .article-row, 
+.view-latest-article-sidebar .article-row, 
+.view-taxonomy-term .article-row, 
+.view-nyheterna .article-row, 
+.view-article-list-on-home-page .article-row {
+    padding-bottom: 0px; 
+    padding-top: 0px;
+}
+
+.sidebar-second{
+    padding-left: 0px !important;
+}
+
+.view-traningen .Promo-info{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.SiteTemplate-inner .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.siteTemplate-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 main.container-fluid {
@@ -69,14 +120,8 @@ body.lopningen .tema-card {
     margin: 0px;
     font-size: 25px;
     margin-left: 15px;
-}
-
-/* body.lopningen .tema-card {
-    width: 100%;
-    padding-left: 2%;
-    padding-right: 2%;
-} */
-
-
+} 
 
 }
+
+
