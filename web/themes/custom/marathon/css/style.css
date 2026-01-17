@@ -128,10 +128,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 
-.hero-news-section img {
+/* .hero-news-section img {
   width: 100%;
   object-fit: cover;
-}
+} */
+
+
 
 .hero-news-section .block {
   position: relative;
@@ -152,6 +154,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 /*************************/
 
 /* Make each views row a positioning context */
+.block-views-blockinspirationen-left-block-2 .views-row,
+.block-views-blockinspirationen-left-block-1 .views-row,
 .view-traningen .views-row,
 .view-topshelf-promotions .views-row,
 .view-left-with-big-image .views-row {
@@ -186,7 +190,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .view-inspirationen-left img, 
 .view-traningen img,
 .view-topshelf-promotions img{
-  height: 393px;
+  /* height: 393px; */
 }
 
 .view-inspirationen-left .Promo-info,
@@ -1186,4 +1190,14 @@ display: none;
 .region-footer-bottom .navbar-nav .nav-link{
   padding-left: 0;
   text-decoration: none;
+}
+.view-teman-om-lopningen .tema-content,
+.block-views-blockteman-om-lopningen-block-1 .tema-content {
+  height: 180px;        
+  overflow-y: auto;     
+}
+.view-teman-om-lopningen .tema-description,
+.block-views-blockteman-om-lopningen-block-1 .tema-description {
+  max-height: 100px;    
+  overflow-y: auto;    
 }
