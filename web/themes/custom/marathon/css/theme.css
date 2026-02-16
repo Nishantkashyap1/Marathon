@@ -32,11 +32,6 @@ main.container-fluid {
   align-items: center; 
 }
 
-/* .row > * {
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-} */
-
 .custom-row {
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -54,13 +49,15 @@ body.has-sidebar-second .main-content {
 }
 
 .sidebar-second {
-    /* width: 30% !important; */
     width: calc(100% - 860px) !important;
     padding-left: 11px !important;
 }
 
 
-.region-sidebar-first, .region-sidebar-second, .region-footer, .region-content {
+.region-sidebar-first, 
+.region-sidebar-second, 
+.region-footer, 
+.region-content {
     padding: 0px !important;
 }
 
