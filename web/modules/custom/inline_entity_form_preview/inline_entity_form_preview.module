@@ -4,6 +4,9 @@ use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\Core\Url;
 use Drupal\Core\Link;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
+
 
 /**
  * @file:
@@ -105,5 +108,81 @@ function inline_entity_form_preview_block_view_alter(array &$build, BlockPluginI
     $term->getCacheTags()
   );
 }
+
+
+/**
+ * Implements hook_pathauto_pattern_alter().
+ */  
+
+function inline_entity_form_preview_pathauto_pattern_alter(&$pattern, array $context) {
+  // Add logging to help debug when and why this hook runs.
+  $logger = \Drupal::logger('inline_entity_form_preview');
+  $logger->debug('pathauto_pattern_alter called: module=@module, type=@type', [
+    '@module' => $context['module'] ?? 'NULL',
+    '@type' => $context['type'] ?? 'NULL',
+  ]);
+
+  // Be defensive: ensure expected context keys exist and are of the expected
+  // types before accessing them. Pathauto can call this hook for different
+  // entities, so 'type' may not always be present.
+  if (empty($context['module']) || $context['module'] !== 'node') {
+    $logger->debug('Skipping pathauto alter: module not node (@module)', ['@module' => $context['module'] ?? 'NULL']);
+    return;
+  }
+
+  if (empty($context['type']) || $context['type'] == 'article') {
+    $logger->debug('Skipping pathauto alter: type not article (@type)', ['@type' => $context['type'] ?? 'NULL']);
+    return;
+  }
+
+  if (empty($context['data']['node']) || !($context['data']['node'] instanceof \Drupal\node\NodeInterface)) {
+    $logger->debug('Skipping pathauto alter: node missing or invalid');
+    return;
+  }
+
+  $node = $context['data']['node'];
+  $logger->debug('Processing node @nid (@title)', ['@nid' => $node->id(), '@title' => $node->label()]);
+  $new_pattern = '';
+
+  // Check field_section (assuming single-value reference field).
+  if ($node->hasField('field_section') && !$node->get('field_section')->isEmpty()) {
+    $section = $node->get('field_section')->entity;
+    if ($section && $section->hasField('name')) {
+      $new_pattern .= $section->get('name')->value . '/';
+    }
+  }
+  else {
+    $new_pattern .= 'nyheter/';
+  }
+
+  // Check field_theme (assuming single-value reference field).
+  if ($node->hasField('field_theme') && !$node->get('field_theme')->isEmpty()) {
+    $theme = $node->get('field_theme')->entity;
+    if ($theme && $theme->hasField('name')) {
+      $new_pattern .= $theme->get('name')->value . '/';
+    }
+  }
+
+  if (!empty($new_pattern)) {
+    $pattern = $new_pattern . '[node:title]';
+    $logger->notice('Setting pathauto pattern for node @nid to: @pattern', [
+      '@nid' => $node->id(),
+      '@pattern' => $pattern,
+    ]);
+  }
+}
+
+/**
+ * Implements hook_views_pre_view().
+ */
+// function inline_entity_form_preview_views_pre_view(&$view, &$display_id, array &$args) {
+//   // Target only your view.
+//   // if ($view->id() !== 'latest_article_sidebar') {
+//   //   return;
+//   // }
+ 
+// }
+
+
 
   

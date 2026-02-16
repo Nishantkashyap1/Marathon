@@ -62,8 +62,22 @@ h1.Promo-heading a {
     font-size: 47px;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h2, .h2 {
+    font-size: 24px;
+    line-height: 1em;
+    font-family: 'Metroflex Narrow';
+}
+
+/* h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "metroflexnarrow",sans-serif;
+} */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Metroflex Narrow';
+}
+
+.article-content:visited .article-title {
+    color: #999;
 }
 
 * {
@@ -128,13 +142,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 
-/* .hero-news-section img {
-  width: 100%;
-  object-fit: cover;
-} */
-
-
-
 .hero-news-section .block {
   position: relative;
   overflow: hidden;
@@ -143,9 +150,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .hero-news-section{
   margin-bottom: 15px;
 }
-
-
-
 
 
 /***************************************
@@ -187,11 +191,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   display: block;
 }
 
-.view-inspirationen-left img, 
-.view-traningen img,
-.view-topshelf-promotions img{
-  /* height: 393px; */
-}
 
 .view-inspirationen-left .Promo-info,
 .view-traningen .Promo-info,
@@ -409,6 +408,7 @@ h2.article-title.article-field-title {
     margin: 0 0 0px;
     color: #333;
     font-weight: 700;
+    font-family: 'Metroflex Narrow';
 }
 
 .article-teaser .field--name-field-lead {
@@ -464,8 +464,6 @@ a.ArticleTeaser:hover .article-title {
 .view-nyheterna .article-field-title,
 .view-article-list-on-home-page .article-date time {
     margin-bottom: 4px;
-    color: #333;
-    font-size: 12px;
 }
 
 .view-taxonomy-term .article-lead .field--name-field-lead,
@@ -523,21 +521,26 @@ a.ArticleTeaser:hover .article-title {
 
 .article-row,
 .ArticleTeaser {
-  position: relative; /* Needed for stretched link positioning */
+  position: relative; 
 }
 
 .article-link-overlay,
 .ArticleTeaser .stretched-link {
   position: absolute;
-  inset: 0;        /* top:0; right:0; bottom:0; left:0 */
-  z-index: 1;      /* Below inner links */
-  font-size: 0px;  /* Hide any text */
+  inset: 0;        
+  z-index: 1;      
+  font-size: 0px;  
 }
 
 .article-row a:not(.article-link-overlay),
 .ArticleTeaser a:not(.stretched-link) {
   position: relative;
   z-index: 2;     
+}
+
+.block-views-blockteman-om-lopningen-block-3 h2 {
+    font-family: 'Metroflex Narrow';
+    font-size: 24px;
 }
 
 /* ==========================================================================
@@ -556,11 +559,12 @@ a.ArticleTeaser:hover .article-title {
   gap: 16px;
   margin: 0 0 10px;
   padding-left: 16px;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 800;
   text-transform: uppercase;
   color: #222;
   position: relative;
+  font-family: 'Metroflex Narrow';
 }
 
 /* Red vertical bar */
@@ -611,8 +615,8 @@ body.lopningen .tema-card {
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease;
-    /* height: 245px; */
-}
+  }
+
 body.inspirationen .tema-card-link,
 body.traningen .tema-card-link,
 body.livet .tema-card-link,
@@ -660,23 +664,37 @@ body.traningen .tema-content,
 body.livet .tema-content,
 body.lopningen .tema-content {
     flex: 1;
-    padding: 12px 12px 11px;
+    padding: 9px 15px 5px;
     display: flex;
     flex-direction: column;
 }
 
-body.inspirationen .tema-title,
-body.traningen .tema-title,
-body.livet .tema-title,
+body.inspirationen .tema-title, 
+body.traningen .tema-title, 
+body.livet .tema-title, 
 body.lopningen .tema-title {
-  margin: 0 0 8px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #111111;
+    margin: 0 0 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    font-family: 'Metroflex Narrow';
 }
 
 .view-teman-om-lopningen .view-content .views-col {
     height: 350px;
+}
+
+h3.tema-title {
+    font-weight: bold !important;
+    font-size: 24px !important;
+    font-family: 'Metroflex Narrow' !important;
+}
+
+.tema-description {
+    margin: 0 0px 6px;
+    line-height: 1.3em;
+    font-size: 14px;
+    color: #999;
 }
 
 body.lopningen .tema-description {
@@ -741,16 +759,10 @@ body.lopningen-skador .view-taxonomy-term .view-header {
     padding-bottom: 25px;
 }
 
-h3.tema-title {
-    font-weight: bold;
-    font-size: 35px;
-}
-
 .view-header .theme-info{
   color: #999;
 }
 
-=================================
 /* Container for the whole list */
 .view-intressanta-lopp {
   max-width: 100%;
@@ -767,19 +779,20 @@ h3.tema-title {
   padding: 15px;
   background: white;
   margin: 0;
+  font-family: 'Metroflex Narrow';
 }
 
 /* Individual Row Setup */
 .view-intressanta-lopp .views-row {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Thin divider line */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .interesting-race__bg img {
   width: 100%;
   height: 73px;
-  object-fit: cover; /* This makes the image cover the area like a background */
+  object-fit: cover; 
   display: block;
 }
 
@@ -817,6 +830,7 @@ background: linear-gradient(
     padding-top: 10px;
     padding-left: 10px;
     color: #000;
+    font-family: 'Metroflex Narrow';
 }
 
 /* Hover effect */
@@ -882,18 +896,18 @@ background: linear-gradient(
     text-transform: uppercase;
     margin-bottom: 0 !important;
     padding-left: 15px;
-    border-left: 5px solid #d33; /* The red vertical bar */
+    border-left: 5px solid #d33; 
     white-space: nowrap;
-    flex-grow: 1; /* Allows the label area to grow */
+    flex-grow: 1; 
 }
 
 #views-exposed-form-nyheterna-block-1 .js-form-item-tid label::after {
     content: "";
     height: 2px;
-    background-color: #ddd; /* Light grey line color */
+    background-color: #ddd; 
     margin-left: 15px;
     margin-right: 15px;
-    flex-grow: 1; /* This makes the line fill the empty space */
+    flex-grow: 1; 
 }
 
 #views-exposed-form-nyheterna-block-1 .js-form-item-tid select {
@@ -926,8 +940,6 @@ background: linear-gradient(
 
 /* Title */
 .ArticleTeaser .article-title {
-  font-size: 24px;
-  font-weight: 600;
   line-height: 1.4;
   margin: 0 0 6px;
 }
@@ -995,13 +1007,6 @@ background: linear-gradient(
     max-width: 730px;
     padding: 0 15px;
 }
-
-/* .node-meta {
-    border-bottom: 1px solid #e5e5e5;
-    border-top: 1px solid #e5e5e5;
-    color: #999;
-    font-size: 14px;
-} */
 
 body.path-frontpage .addtoany_list {
 display: none;
