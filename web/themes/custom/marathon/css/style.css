@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 32px 15px;
+  padding: 20px 15px;
   z-index: 2;
   color: #fff;
 }
@@ -424,6 +424,7 @@ h2.article-title.article-field-title {
     max-width: none !important;
 }
 
+.view-remaining-articles .article-row h3.article-title a,
 .view-taxonomy-term .article-field-title .field--name-title,
 .view-nyheterna .article-field-title a,
 .view-article-list-on-home-page h3.article-title.article-field-title {
@@ -432,15 +433,16 @@ h2.article-title.article-field-title {
     font-size: 24px;
     font-weight: 700;
     font-family: 'Metroflex Narrow';
+    text-decoration: none;
 }
 
  /* Article teaser hover → change title color */
+ .view-remaining-articles .article-row h3.article-title a:hover,
 .ArticleTeaser:hover .article-title,
 .ArticleTeaser:hover .article-title a {
   color: #d33a2c; 
   text-decoration: none;
 }
-
 
 /* Change title color on article hover */
 .article-teaser:hover .article-title,
@@ -449,6 +451,7 @@ h2.article-title.article-field-title {
 }
 
 /* Force title color change when card (link) is hovered */
+.ArticleTeaser:hover .article-title,
 a.interesting-race:hover .interesting-race__title,
 a.ArticleTeaser:hover .article-title {
   color: #d33a2c !important;
@@ -632,7 +635,7 @@ body.traningen .tema-image,
 body.livet .tema-image,
 body.lopningen .tema-image {
     position: relative;
-    height: 136px;
+    height: 95px;
     overflow: hidden;
 }
 
@@ -863,6 +866,7 @@ background: linear-gradient(
     line-height: 1em;
     color: #fff;
     font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* Date Styling */
@@ -953,6 +957,7 @@ background: linear-gradient(
 .ArticleTeaser .article-title {
     line-height: 1.4;
     margin: 0 0 0px;
+    font-family: 'Metroflex Narrow';
 }
 
 /* Date */
@@ -963,7 +968,7 @@ background: linear-gradient(
   margin: 0;
 }
 
-.ArticleTeaser .article-title a {
+.view-latest-article-sidebar .ArticleTeaser .article-title a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
@@ -1033,9 +1038,16 @@ body.path-frontpage .addtoany_list {
     color: #999;
     font-size: 14px;
     display: flex;
-    justify-content: space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.full-node-details .field.field--name-field-content-section-image.field--type-image.field--label-hidden.field__item {
+    margin-bottom: 10px;
 }
 
 .author-info {
@@ -1243,7 +1255,7 @@ body.path-frontpage .addtoany_list {
     justify-content: center;
     border-radius: 4px;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    height: 74px;
+    /* height: 74px; */
     padding-left: 10px;
     margin-left: -15px;
 }
@@ -1254,7 +1266,61 @@ body.path-frontpage .addtoany_list {
   cursor: pointer;
 }
 
+h1.promo-heading a:hover,
+h1.Promo-heading a:hover {
+    text-decoration: underline;
+}
 
 
 
+.pager {
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+
+.pager ul.pagination {
+  display: flex;
+  list-style: none;
+  padding-top: 0px;
+}
+
+.pager ul.pagination li a{
+  display: block;
+  padding: 8px 12px;
+  color: #205f82;
+  text-decoration: none;
+  border: none;;
+}
+
+.pager ul.pagination li.active a{
+  background-color: #fff;
+  color:#000;
+}
+
+.pager .page-link:focus {
+  box-shadow: none;
+}
+
+.Promo-info p.Promo-lead {
+    margin-bottom: 0px;
+}
+
+.block-views-blockintressanta-lopp-block-1 {
+    width: 416px;
+    padding-top: 35px;
+}
+
+.interesting-race__bg {
+  overflow: hidden;
+}
+
+.interesting-race__bg img {
+  transition: transform 0.35s ease;
+}
+
+.interesting-race:hover .interesting-race__bg img {
+  transform: translateX(6px);
+} 
 
